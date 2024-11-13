@@ -1,9 +1,9 @@
 import React from "react";
 import Services_wellness from "./Services_wellness";
-import { Carrer_carousel } from "../../assets";
-import Carrer_roles from "./Carrer_roles";
+import { Career_carousel } from "../../assets";
+import Career_roles from "./Career_roles";
 
-const Carrer: React.FC = () => {
+const Career: React.FC = () => {
   return (
     <div>
       <div>
@@ -50,11 +50,11 @@ const Carrer: React.FC = () => {
             <p className="font-medium text-[44px]">Interview process</p>
           </div>
           <div className="flex items-center justify-center">
-            <img src={Carrer_carousel} alt="" />
+            <img src={Career_carousel} alt="" />
           </div>
         </div>
         <div className="md:mx-[160px] md:mt-[100px]">
-        <Carrer_roles/>
+        <Career_roles/>
 
         </div>
       </div>
@@ -62,4 +62,4 @@ const Carrer: React.FC = () => {
   );
 };
 
-export default Carrer;
+export default Career;

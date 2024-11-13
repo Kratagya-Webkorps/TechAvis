@@ -30,7 +30,7 @@ import Quotation from "./Quotation.png";
 import Services_01 from "./Services_01.png";
 import Services_02 from "./Services_02.png";
 import Services_03 from "./Services_03.png";
-import Carrer_carousel from "./Carrer_carousel.png";
+import Career_carousel from "./Career_carousel.png";
 import YTwitter from "./Yellow_Twitter.png";
 import Instagram from "./Instagram.png";
 import Discord from "./Discord.png";
@@ -69,7 +69,7 @@ export {
   Services_01,
   Services_02,
   Services_03,
-  Carrer_carousel,
+  Career_carousel,
   YTwitter,
   Instagram,
   Discord,

@@ -15,7 +15,7 @@ const data = [
   },
 ];
 
-const Carrer_roles:React.FC = () => {
+const Career_roles:React.FC = () => {
   return (
     <div className="overflow-x-auto">
       <div className="flex justify-center md:justify-start md:ml-20">
@@ -53,4 +53,4 @@ const Carrer_roles:React.FC = () => {
   );
 };
 
-export default Carrer_roles;
+export default Career_roles;

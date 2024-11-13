@@ -50,7 +50,7 @@ const Header: React.FC = () => {
             <Link to="/" className="py-2 text-black font-medium text-base hover:text-blue-600" onClick={toggleDropdown}>Home</Link>
             <Link to="/about" className="py-2 text-black font-medium text-base hover:text-blue-600" onClick={toggleDropdown}>About</Link>
             <Link to="/services" className="py-2 text-black font-medium text-base hover:text-blue-600" onClick={toggleDropdown}>Services</Link>
-            <Link to="/carrer" className="py-2 text-black font-medium text-base hover:text-blue-600" onClick={toggleDropdown}>Carrer</Link>
+            <Link to="/career" className="py-2 text-black font-medium text-base hover:text-blue-600" onClick={toggleDropdown}>Career</Link>
             <Link to="/contact" className="py-2 text-black font-medium text-base hover:text-blue-600" onClick={toggleDropdown}>Contact</Link>
           </div>
         )}
@@ -61,7 +61,7 @@ const Header: React.FC = () => {
             <Link to="/" className="text-black font-medium text-base hover:text-blue-600">Home</Link>
             <Link to="/about" className="text-black font-medium text-base hover:text-blue-600">About</Link>
             <Link to="/services" className="text-black font-medium text-base hover:text-blue-600">Services</Link>
-            <Link to="/carrer" className="text-black font-medium text-base hover:text-blue-600">Carrer</Link>
+            <Link to="/career" className="text-black font-medium text-base hover:text-blue-600">Career</Link>
             <Link to="/contact" className="text-black font-medium text-base hover:text-blue-600">Contact</Link>
           </div>
         </div>
