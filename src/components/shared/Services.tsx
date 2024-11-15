@@ -139,7 +139,7 @@ const Services: React.FC = () => {
           Tailored IT Solutions Designed To <br className="hidden md:block" />
           Empower Your Business Success.
         </h2>
-        <div className="flex flex-col xl:flex-row  md:p-[25px] ">
+        <div className="flex flex-col xl:flex-row p-4 md:p-[25px] ">
           <div className="flex md:flex-row justify-center xl:justify-start mb-4">
             <div className="space-y-2 md:mt-4">
               {services.map((service) => (
