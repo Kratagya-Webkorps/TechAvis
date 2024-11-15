@@ -13,11 +13,14 @@ const Header: React.FC = () => {
   return (
     <header className="contents w-full md:pt-5 md:pb-5 z-20">
       <div className="mx-auto flex justify-between items-center p-3">
-        <div className="flex items-center gap-3 md:ml-32 ml-8">
+        <div className="flex items-center gap-3 md:ml-20 ml-8">
+        <Link to="/" className=" flex justify-center items-center gap-4">
+        
           <img src={logo} alt="Techavis Logo" className="h-11" />
           <span className="text-Logo font-normal leading-6 tracking-[.15rem]">
             Tech<span className="text-black">avis</span>
           </span>
+        </Link>
         </div>
 
         {/* Mobile Menu Button */}

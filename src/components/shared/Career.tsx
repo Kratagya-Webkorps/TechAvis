@@ -1,9 +1,47 @@
 import React from "react";
 import Services_wellness from "./Services_wellness";
-import { Career_carousel } from "../../assets";
 import Career_roles from "./Career_roles";
+import Slider from "react-slick";
+
 
 const Career: React.FC = () => {
+  const data = [
+    {
+      number: 1,
+      title: "Initial screening",
+      description:
+        "The first step in the interview process is usually a screening call or email to assess the candidate's qualifications and fit for the role.",
+    },
+    {
+      number: 2,
+      title: "Second screening",
+      description:
+        "The first step in the interview process is usually a screening call or email to assess the candidate's qualifications and fit for the role.",
+    },
+    // Add more items as needed
+  ];
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false, // Default no autoplay
+    arrows: true,    // Show arrows by default
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 768, // Mobile screens below 768px
+        settings: {
+          autoplay: true,      // Enable autoplay on mobile
+          autoplaySpeed: 2000, // Set the autoplay speed in milliseconds
+          arrows: false,       // Hide arrows on mobile
+        },
+      },
+    ],
+  };
+
   return (
     <div>
       <div>
@@ -16,7 +54,8 @@ const Career: React.FC = () => {
           <div className="flex flex-col items-center ">
             <div className="flex justify-center">
               <p className=" text-xl md:text-5xl">
-                Discover Your <span className="text-4xl md:text-9xl ">Potential</span> at
+                Discover Your{" "}
+                <span className="text-4xl md:text-9xl ">Potential</span> at
                 Techavis
               </p>
             </div>
@@ -49,17 +88,54 @@ const Career: React.FC = () => {
           <div className="flex justify-center md:justify-start md:ml-20">
             <p className="font-medium text-[44px]">Interview process</p>
           </div>
-          <div className="flex items-center justify-center">
-            <img src={Career_carousel} alt="" />
+          <div className="md:w-1/2 mx-auto">
+            <Slider {...settings} className="relative">
+              {data.map((item, index) => (
+                <div key={index} className="relative  ">
+                  <div className="p-4">
+                    <div className="card-content h-[340px] p-6 bg-white border rounded-lg shadow-md relative z-10">
+                      <div className="flex justify-center mb-4">
+                        <span className="bg-primary text-white px-4 py-3 rounded-md font-bold text-lg">
+                          {item.number}
+                        </span>
+                      </div>
+                      <h3 className="text-3xl font-medium mb-2 text-center mt-8">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 text-center font-normal text-xl mt-6">
+                        {item.description}
+                      </p>
+                    </div>
+                   
+                  </div>
+                </div>
+              ))}
+            </Slider>
           </div>
         </div>
         <div className="md:mx-[160px] md:mt-[100px]">
-        <Career_roles/>
-
+          <Career_roles />
         </div>
       </div>
     </div>
   );
 };
+const NextArrow = (props: JSX.IntrinsicAttributes & React.ClassAttributes<HTMLButtonElement> & React.ButtonHTMLAttributes<HTMLButtonElement>) => (
+  <button
+    {...props}
+    className="absolute right-[-20px] top-1/2 transform -translate-y-1/2 text-2xl"
+  >
+    ❯
+  </button>
+);
+
+const PrevArrow = (props: JSX.IntrinsicAttributes & React.ClassAttributes<HTMLButtonElement> & React.ButtonHTMLAttributes<HTMLButtonElement>) => (
+  <button
+    {...props}
+    className="absolute left-[-20px] top-1/2 transform -translate-y-1/2 text-2xl"
+  >
+    ❮
+  </button>
+);
 
 export default Career;

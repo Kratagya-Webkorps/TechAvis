@@ -13,7 +13,7 @@ const About: React.FC = () => {
   return (
     <div>
       <div>
-        <div className="flex flex-col-reverse md:flex-row justify-around items-center md:items-start md:space-x-8 bg-[#FAFAFA] p-6 md:p-12">
+        <div className="flex flex-col-reverse md:flex-row justify-around items-center md:items-start md:space-x-8 bg-[#FAFAFA] p-6 pt-0 md:p-12">
           {/* Left Text Section */}
           <div className="mt-6 text-center md:text-left md:p-8 md:pb-0 md:pl-0 md:w-1/2">
             <p className=" text-2xl md:text-[2.9rem] font-bold mb-4 md:mb-0 leading-tight">
@@ -180,7 +180,7 @@ const About: React.FC = () => {
             <div className="w-4 h-4 bg-about_num rounded-full"></div>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center md:p-12">
+        <div className="flex flex-col justify-center items-center p-4 md:p-12">
           <div>
             <p className="text-custom_blue font-medium text-2xl md:text-[59px] text-center">
               Get matched to your dream opportunity

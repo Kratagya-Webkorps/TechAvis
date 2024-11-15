@@ -13,8 +13,8 @@ const Contact = () => {
             Any question or remarks? Just write us a message!
           </p>
         </div>
-        <div className="flex mx-[132px] justify-between bg-white shadow-xl mb-[62px] p-[10px]">
-          <div className="p-[10px] bg-primary w-2/5 rounded-xl">
+        <div className="flex flex-col md:flex-row mx-4 md:mx-[132px] md:justify-between bg-white shadow-xl mb-[62px] p-[10px]">
+          <div className="p-[10px] md:w-1/2 bg-primary rounded-xl">
             <div className="p-10 ">
               <p className="font-semibold text-[28px] text-white">
                 {" "}
@@ -62,42 +62,64 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="w-full pt-4 md:px-[50px] md:pt-[60px] ">
             <div className="">
-              <form className="flex flex-col  space-y-4">
-                <div className="flex space-x-4">
-                  <div className="w-1/2">
-                    <label className="block text-gray-600">First Name</label>
+              <form className="flex flex-col  space-y-[45px] ">
+                <div className="grid md:grid-cols-2 gap-10">
+                  <div className="relative w-full mb-5">
+                    <label htmlFor="first_name" className="text-[#8D8D8D] font-medium text-xs">
+                      First name
+                    </label>
                     <input
                       type="text"
-                      className="w-full mt-1 p-2 border rounded"
-                      placeholder="First Name"
+                      name="first_name"
+                      id="first_name"
+                      className="block w-full  py-2.5 text-xs text-gray-900 bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-blue-600"
+                      placeholder=" "
+                      required
                     />
                   </div>
-                  <div className="w-1/2">
-                    <label className="block text-gray-600">Last Name</label>
+                  <div className="relative w-full mb-5">
+                    <label htmlFor="last_name" className=" font-medium text-xs">
+                      Last name
+                    </label>
                     <input
                       type="text"
-                      className="w-full mt-1 p-2 border rounded"
-                      placeholder="Last Name"
+                      name="last_name"
+                      id="last_name"
+                      className="block w-full py-2.5 text-xs text-gray-900 bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-blue-600"
+                      placeholder=" "
+                      required
                     />
                   </div>
                 </div>
-                <div>
-                  <label className="block text-gray-600">Email</label>
-                  <input
-                    type="email"
-                    className="w-full mt-1 p-2 border rounded"
-                    placeholder="Email"
-                  />
-                </div>
-                <div>
-                  <label className="block text-gray-600">Phone Number</label>
-                  <input
-                    type="tel"
-                    className="w-full mt-1 p-2 border rounded"
-                    placeholder="+1 012 3456 789"
-                  />
+                <div className="grid md:grid-cols-2 gap-10">
+                  <div className="relative w-full mb-5">
+                    <label htmlFor="email" className="text-[#8D8D8D] font-medium text-xs">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      className="block w-full py-2.5 text-xs text-gray-900 bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-blue-600"
+                      placeholder=" "
+                      required
+                    />
+                  </div>
+                  <div className="relative w-full mb-5">
+                    <label htmlFor="contact" className=" font-medium text-xs">
+                      Phone Number
+                    </label>
+                    <input
+                      type="number"
+                      name="contact"
+                      id="contact"
+                      className="block w-full py-2.5 text-xs text-gray-900 bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-blue-600"
+                      placeholder=" "
+                      required
+                    />
+                  </div>
                 </div>
                 <div>
                   <label className="block text-gray-600">Select Subject?</label>
@@ -128,17 +150,24 @@ const Contact = () => {
                     </label>
                   </div>
                 </div>
-                <div>
-                  <label className="block text-gray-600">Message</label>
-                  <textarea
-                    className="w-full mt-1 p-2 border rounded"
-                    rows={4}
-                    placeholder="Write your message.."
-                  ></textarea>
+                <div className="relative w-full mb-5">
+                  <label htmlFor="message" className="text-[#8D8D8D] font-medium text-xs">
+                    Message
+                  </label>
+                  <input
+                    type="text"
+                    name="message"
+                    id="message"
+                    className="block w-full py-2.5 text-xs text-gray-900 bg-transparent border-b-2 border-gray-300 focus:outline-none focus:border-blue-600"
+                    placeholder="Write your message.. "
+                    required
+                  />
                 </div>
-                <button className="w-full mt-4 p-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                <div className="w-full flex justify-end ">
+                <button className=" mt-4 px-2 py-3 md:px-[48px] md:py-[15px] bg-primary text-white rounded shadow-lg">
                   Send Message
                 </button>
+                </div>
               </form>
             </div>
           </div>

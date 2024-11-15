@@ -5,6 +5,7 @@ import ellipse3 from "./Ellipse 3.png";
 import ellipse4 from "./Ellipse 4.png";
 import ellipse5 from "./Ellipse 5.png";
 import ellipse6 from "./Ellipse 6.png";
+import ellipse7 from "./Ellipse 7.png";
 import dot_Ornament from "./Dot Ornament.png";
 import airbnb from "./Airbnb Logo.png";
 import amazon from "./Amazon Logo.png";
@@ -30,13 +31,18 @@ import Quotation from "./Quotation.png";
 import Services_01 from "./Services_01.png";
 import Services_02 from "./Services_02.png";
 import Services_03 from "./Services_03.png";
-import Career_carousel from "./Career_carousel.png";
 import YTwitter from "./Yellow_Twitter.png";
 import Instagram from "./Instagram.png";
 import Discord from "./Discord.png";
-import Hand from './Hand.png'
+import Hand from "./Hand.png";
+import HomeBg from "./Home_bg.png";
+import Icon1 from "./Icon1.png";
+import Icon2 from "./Icon2.png";
+import Icon3 from "./Icon3.png";
+import Icon4 from "./Icon4.png";
 
 export {
+  HomeBg,
   logo,
   home1,
   home2,
@@ -49,6 +55,7 @@ export {
   ellipse4,
   ellipse5,
   ellipse6,
+  ellipse7,
   dot_Ornament,
   airbnb,
   amazon,
@@ -69,9 +76,12 @@ export {
   Services_01,
   Services_02,
   Services_03,
-  Career_carousel,
   YTwitter,
   Instagram,
   Discord,
-  Hand
+  Hand,
+  Icon1,
+  Icon2,
+  Icon3,
+  Icon4,
 };

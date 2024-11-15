@@ -71,7 +71,7 @@ const Services_wellness: React.FC = () => {
     <div className="md:mx-auto flex flex-col md:flex-row md:justify-around items-center md:items-start gap-4 p-8 md:p-0">
       <div className="flex flex-col text-center md:text-start md:w-1/2">
         <h2 className="text-[43px] font-bold mb-4">Wellness and Benefit</h2>
-        <p className="text-[#7C7C7C] text-[20px] mb-8 md: w-2/3">
+        <p className="text-[#7C7C7C] text-[20px] mb-8 md:w-2/3">
           As part of our pursuit to lead impactful, fulfilling lives, we take
           benefits pretty seriously.
         </p>

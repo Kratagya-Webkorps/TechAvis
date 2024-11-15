@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Services_01, Services_02, Services_03 } from "../../assets";
+import { ellipse7, Services_01, Services_02, Services_03 } from "../../assets";
 import { FaCloud, FaNetworkWired, FaShieldAlt, FaTools } from "react-icons/fa";
 import WhyChooseUs from "./WhyChooseUs";
 type ServiceKey =
@@ -26,13 +26,13 @@ const Services: React.FC = () => {
   const serviceContent: Record<ServiceKey, ServiceContent> = {
     "IT Infrastructure Management": {
       title: "IT Infrastructure Management",
-      description: "Description for IT Infrastructure Management.",
-      details: "Details about IT Infrastructure Management.",
+      description: "IT Infrastructure Management is vital for ensuring the reliability, security, and efficiency of an organization's technology systems, encompassing hardware, software, networks, and data centers.",
+      details: "IT Infrastructure Management involves overseeing and optimizing an organization's entire IT ecosystem to support business operations effectively. This includes network management, which ensures connectivity and performance; server and hardware management, focusing on maintenance and scalability; and cloud infrastructure management, which optimizes cloud resources. By implementing proactive monitoring and maintenance practices, organizations can minimize downtime and enhance system performance. Additionally, robust security measures are essential to protect against cyber threats, ensuring data integrity and compliance with regulations. Effective IT infrastructure management not only boosts productivity but also drives business growth by aligning IT resources with organizational goals.",
     },
     "Cloud Solutions & Management": {
       title: "Cloud Solutions & Management",
-      description: "Description for Cloud Solutions & Management.",
-      details: "Details about Cloud Solutions & Management.",
+      description: "Cloud Solutions & Management are essential for optimizing cloud resources, enabling organizations to leverage cloud technologies for improved performance and scalability.",
+      details: "Cloud Solutions & Management encompass a range of services designed to facilitate the efficient use of cloud computing resources. These solutions provide centralized management, allowing IT teams to monitor, provision, and configure cloud services from a single interface, which simplifies operations across public, private, and hybrid cloud environments, Automation is a key feature, enabling organizations to streamline routine tasks such as resource allocation and scaling, thereby reducing human error and improving efficiency, Additionally, effective cloud management ensures compliance with regulatory requirements and enhances security by automating policies and monitoring for potential threats, By implementing robust cloud management strategies, businesses can optimize costs, improve resource utilization, and maintain high performance levels across their cloud infrastructure.",
     },
     "Cybersecurity Services": {
       title: "Cybersecurity Services",
@@ -43,15 +43,18 @@ const Services: React.FC = () => {
     },
     "IT Support & Maintenance": {
       title: "IT Support & Maintenance",
-      description: "Description for IT Support & Maintenance.",
-      details: "Details about IT Support & Maintenance.",
+      description: "IT Support & Maintenance is essential for ensuring the smooth operation and reliability of an organization's IT systems, providing both proactive and reactive solutions.",
+      details: "IT Support & Maintenance involves a comprehensive suite of services aimed at keeping IT systems running efficiently. This includes preventive maintenance, which anticipates issues before they arise, and reactive support, which addresses problems as they occur. Support is typically categorized into three levels: Level 1 for basic troubleshooting, Level 2 for in-depth analysis, and Level 3 for advanced system administration. By implementing these services, organizations can minimize downtime, enhance productivity, and ensure that their IT infrastructure remains secure and up-to-date. Effective IT support not only improves operational efficiency but also fosters trust with clients by ensuring reliable service delivery.",
     },
   };
   return (
     <div className="mt-12">
       <div>
-        <div className="flex flex-col items-center ">
-          <p className="font-extrabold text-services_heading text-6xl text-center">
+        <div className="relative flex flex-col items-center mb-4 md:mb-0 ">
+          <div className="absolute left-[4vw] top-[20%]">
+            <img src={ellipse7} alt="" />
+          </div>
+          <p className="font-extrabold text-services_heading text-3xl md:text-6xl text-center">
             Positioning the company <br className="hidden md:block" /> as a
             trusted partner
           </p>
@@ -65,13 +68,17 @@ const Services: React.FC = () => {
             Connect with us
           </button>
         </div>
-        <div className="flex justify-center ">
+
+        <div className="flex justify-center pb-4 md:pb-0 ">
+          <div className="absolute right-[9vw] bottom-1/2 md:bottom-0 md:top-[23vw] -z-10">
+            <img src={ellipse7} alt="" />
+          </div>
           <img src={Services_01} alt="" />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-around md:p-12 space-y-8 md:space-y-0 md:space-x-8 bg-[#F4F9FF] ">
+      <div className="flex flex-col md:flex-row justify-around p-4 md:p-12  md:space-y-0 md:space-x-8 bg-[#F4F9FF] ">
         {/* Left Section with Title and Description */}
-        <div className="w-full md:w-1/2 text-center md:text-left mt-20 space-y-6 p-4 md:px-24">
+        <div className="w-full md:w-1/2 text-center md:text-left md:mt-20 space-y-6 p-4 md:px-24">
           <h3 className="text-primary text-2xl font-semibold">Our Services</h3>
           <h2 className="text-4xl md:text-6xl font-bold text-services_heading">
             Perfect and Fast Movement
@@ -126,21 +133,21 @@ const Services: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:pt-[70px] md:mx-[100px] space-y-8 md:space-y-0 ">
+      <div className="flex flex-col pt-8 md:pt-[70px] md:mx-[100px] space-y-8 md:space-y-0 ">
         {/* Left Section: Service List */}
-        <h2 className="text-2xl md:text-4xl font-bold text-[#334756] text-center md:text-start ">
+        <h2 className="text-2xl md:text-4xl font-bold text-[#334756] text-center xl:text-start ">
           Tailored IT Solutions Designed To <br className="hidden md:block" />
           Empower Your Business Success.
         </h2>
-        <div className="flex flex-col md:flex-row md:p-[25px] ">
-          <div className="flex md:flex-row justify-center md:justify-start mb-4">
-            <div className="space-y-2 mt-4">
+        <div className="flex flex-col xl:flex-row  md:p-[25px] ">
+          <div className="flex md:flex-row justify-center xl:justify-start mb-4">
+            <div className="space-y-2 md:mt-4">
               {services.map((service) => (
                 <div className="">
                   <div
                     key={service}
                     onClick={() => setSelectedService(service)}
-                    className={`cursor-pointer p-2 text-[25px]  font-semibold whitespace-nowrap  ${
+                    className={`cursor-pointer p-2 text-xl md:text-[25px] text-center xl:text-start  font-semibold whitespace-nowrap  ${
                       selectedService === service
                         ? "text-white bg-blue-600 rounded-md"
                         : "text-gray-600"
@@ -154,16 +161,16 @@ const Services: React.FC = () => {
           </div>
 
           {/* Right Section: Selected Service Content */}
-          <div className=" bg-[#EEF2FE] p-8 rounded-lg shadow-lg md:ml-[207px] md:min-h-[440px]  justify-center items-center">
-            <h3 className="text-2xl font-semibold text-gray-800">
+          <div className=" bg-[#EEF2FE] p-8 rounded-lg shadow-lg xl:ml-[207px] md:min-h-[440px]  justify-center items-center">
+            <h3 className="text-2xl font-semibold text-gray-800 text-center md:text-start">
               {serviceContent[selectedService].title}
             </h3>
             <div className="mt-2 h-3 bg-gradient-to-r from-blue-600 to-transparent w-1/2"></div>
 
-            <p className="text-gray-600 mt-4 font-bold">
+            <p className="text-gray-600 mt-4 font-bold text-center md:text-start">
               {serviceContent[selectedService].description}
             </p>
-            <p className="text-gray-500 mt-4 leading-relaxed">
+            <p className="text-gray-500 mt-4 leading-relaxed text-center md:text-start">
               {serviceContent[selectedService].details}
             </p>
           </div>
