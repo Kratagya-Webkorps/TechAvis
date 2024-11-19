@@ -3,24 +3,24 @@ import { facebook, linkedin, logo, twitter } from "../../assets";
 
 const Footer:React.FC = () => {
   return (
-    <footer className=" px-4 md:px-16">
+    <footer className=" px-4 xl:px-16">
       <div className=" px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0 border-t-2 pt-11">
+        <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center space-y-8 xl:space-y-0 border-t-2 pt-11">
           
           {/* Logo and Description */}
-          <div className="md:w-1/3 ">
-            <div className="flex items-center justify-center md:justify-start space-x-3">
+          <div className="xl:w-1/3 ">
+            <div className="flex items-center justify-center xl:justify-start space-x-3">
             <img src={logo} alt="Techavis Logo" className="h-11" />
             <span className="text-Logo font-normal leading-6 tracking-[.15rem]">
             Tech<span className="text-black">avis</span>
           </span>
 
             </div>
-            <p className="mt-4 text-secondary text-center md:text-start">
+            <p className="mt-4 text-secondary text-center xl:text-start">
               A leading managed IT solutions provider with extensive expertise in design and development. We offer ready-made websites, mobile applications, and robust online business services tailored to manage and optimize IT infrastructure.
             </p>
             {/* Social Icons */}
-            <div className="flex space-x-4 mt-4 justify-center md:justify-start">
+            <div className="flex space-x-4 mt-4 justify-center xl:justify-start">
             <img src={facebook} alt="" />
             <img src={twitter} alt="" />
             <img src={linkedin} alt="" />
@@ -29,10 +29,10 @@ const Footer:React.FC = () => {
           </div>
 
           {/* Links Sections */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:ml-20 text-center md:text-start">
+          <div className="grid grid-cols-2 xl:grid-cols-4 gap-12 xl:ml-20 text-center xl:text-start">
             <div className="">
               <h3 className="text-xl font-semibold text-gray-900 whitespace-nowrap">What We Do</h3>
-              <ul className="mt-4 text-sm space-y-2 font-normal md:whitespace-nowrap">
+              <ul className="mt-4 text-sm space-y-2 font-normal xl:whitespace-nowrap">
                 <li>IT Infrastructure Management</li>
                 <li>Cloud Solutions & Management</li>
                 <li>Cybersecurity Services</li>

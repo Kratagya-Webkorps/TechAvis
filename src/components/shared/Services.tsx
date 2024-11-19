@@ -50,17 +50,17 @@ const Services: React.FC = () => {
   return (
     <div className="mt-12">
       <div>
-        <div className="relative flex flex-col items-center mb-4 md:mb-0 ">
+        <div className="relative flex flex-col items-center mb-4 xl:mb-0 ">
           <div className="absolute left-[4vw] top-[20%]">
             <img src={ellipse7} alt="" />
           </div>
-          <p className="font-extrabold text-services_heading text-3xl md:text-6xl text-center">
-            Positioning the company <br className="hidden md:block" /> as a
+          <p className="font-extrabold text-services_heading text-3xl xl:text-6xl text-center">
+            Positioning the company <br className="hidden xl:block" /> as a
             trusted partner
           </p>
           <span className="font-normal opacity-[60%] text-xl text-center p-9 text-services_span">
             Trusted technology partner delivering custom software, data
-            analytics, and IT management. <br className="hidden md:block" />
+            analytics, and IT management. <br className="hidden xl:block" />
             Optimizing operations, unlocking insights, and accelerating business
             growth.
           </span>
@@ -69,21 +69,21 @@ const Services: React.FC = () => {
           </button>
         </div>
 
-        <div className="flex justify-center pb-4 md:pb-0 ">
-          <div className="absolute right-[9vw] bottom-1/2 md:bottom-0 md:top-[23vw] -z-10">
+        <div className="flex justify-center pb-4 xl:pb-0 ">
+          <div className="absolute right-[9vw] bottom-1/2 xl:bottom-0 xl:top-[23vw] -z-10">
             <img src={ellipse7} alt="" />
           </div>
           <img src={Services_01} alt="" />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-around p-4 md:p-12  md:space-y-0 md:space-x-8 bg-[#F4F9FF] ">
+      <div className="flex flex-col xl:flex-row justify-around p-4 xl:p-12  xl:space-y-0 xl:space-x-8 bg-[#F4F9FF] ">
         {/* Left Section with Title and Description */}
-        <div className="w-full md:w-1/2 text-center md:text-left md:mt-20 space-y-6 p-4 md:px-24">
+        <div className="w-full xl:w-1/2 text-center xl:text-left xl:mt-20 space-y-6 p-4 xl:px-24">
           <h3 className="text-primary text-2xl font-semibold">Our Services</h3>
-          <h2 className="text-4xl md:text-6xl font-bold text-services_heading">
+          <h2 className="text-4xl xl:text-6xl font-bold text-services_heading">
             Perfect and Fast Movement
           </h2>
-          <p className="text-services_span text-lg md:text-xl leading-relaxed">
+          <p className="text-services_span text-lg xl:text-xl leading-relaxed">
             We develop creative strategies to help achieve your business goals
             and enhance your income through our services. Our focus is on making
             your content engaging and attracting attention to your business.
@@ -91,7 +91,7 @@ const Services: React.FC = () => {
         </div>
 
         {/* Right Section with Service Cards */}
-        <div className="grid md:grid-cols-2 gap-8 p-4  w-full md:w-1/2 md:pr-20">
+        <div className="grid xl:grid-cols-2 gap-8 p-4  w-full xl:w-1/2 xl:pr-20">
           {/* Service 1 */}
           <div className="flex flex-col items-center p-6 bg-white text-center rounded-3xl  shadow-lg h-72 justify-center ">
             <div className="text-white text-4xl mb-4 bg-blue-500 p-4 rounded-full ">
@@ -133,21 +133,21 @@ const Services: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col pt-8 md:pt-[70px] md:mx-[100px] space-y-8 md:space-y-0 ">
+      <div className="flex flex-col pt-8 xl:pt-[70px] xl:mx-[100px] space-y-8 xl:space-y-0 ">
         {/* Left Section: Service List */}
-        <h2 className="text-2xl md:text-4xl font-bold text-[#334756] text-center xl:text-start ">
-          Tailored IT Solutions Designed To <br className="hidden md:block" />
+        <h2 className="text-2xl xl:text-4xl font-bold text-[#334756] text-center xl:text-start ">
+          Tailored IT Solutions Designed To <br className="hidden xl:block" />
           Empower Your Business Success.
         </h2>
-        <div className="flex flex-col xl:flex-row p-4 md:p-[25px] ">
-          <div className="flex md:flex-row justify-center xl:justify-start mb-4">
-            <div className="space-y-2 md:mt-4">
+        <div className="flex flex-col xl:flex-row p-4 xl:p-[25px] ">
+          <div className="flex xl:flex-row justify-center xl:justify-start mb-4">
+            <div className="space-y-2 xl:mt-4">
               {services.map((service) => (
                 <div className="">
                   <div
                     key={service}
                     onClick={() => setSelectedService(service)}
-                    className={`cursor-pointer p-2 text-xl md:text-[25px] text-center xl:text-start  font-semibold whitespace-nowrap  ${
+                    className={`cursor-pointer p-2 text-xl xl:text-[25px] text-center xl:text-start  font-semibold whitespace-nowrap  ${
                       selectedService === service
                         ? "text-white bg-blue-600 rounded-md"
                         : "text-gray-600"
@@ -161,22 +161,22 @@ const Services: React.FC = () => {
           </div>
 
           {/* Right Section: Selected Service Content */}
-          <div className=" bg-[#EEF2FE] p-8 rounded-lg shadow-lg xl:ml-[207px] md:min-h-[440px]  justify-center items-center">
-            <h3 className="text-2xl font-semibold text-gray-800 text-center md:text-start">
+          <div className=" bg-[#EEF2FE] p-8 rounded-lg shadow-lg xl:ml-[207px] xl:min-h-[440px]  justify-center items-center">
+            <h3 className="text-2xl font-semibold text-gray-800 text-center xl:text-start">
               {serviceContent[selectedService].title}
             </h3>
             <div className="mt-2 h-3 bg-gradient-to-r from-blue-600 to-transparent w-1/2"></div>
 
-            <p className="text-gray-600 mt-4 font-bold text-center md:text-start">
+            <p className="text-gray-600 mt-4 font-bold text-center xl:text-start">
               {serviceContent[selectedService].description}
             </p>
-            <p className="text-gray-500 mt-4 leading-relaxed text-center md:text-start">
+            <p className="text-gray-500 mt-4 leading-relaxed text-center xl:text-start">
               {serviceContent[selectedService].details}
             </p>
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-around p-6 md:p-12 space-y-8 md:space-y-0 md:space-x-8">
+      <div className="flex flex-col xl:flex-row justify-around p-6 xl:p-12 space-y-8 xl:space-y-0 xl:space-x-8">
         <div className="mt-12 ">
           <WhyChooseUs />
         </div>
@@ -184,22 +184,22 @@ const Services: React.FC = () => {
           <img src={Services_02} alt="" />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-around items-center md:items-start p-6 md:p-12 md:mx-24 ">
+      <div className="flex flex-col xl:flex-row justify-around items-center xl:items-start p-6 xl:p-12 xl:mx-24 ">
         {/* Left Text Section */}
-        <div className="text-center md:text-left md:pb-0 w-full md:w-1/2 flex flex-col justify-between">
+        <div className="text-center xl:text-left xl:pb-0 w-full xl:w-1/2 flex flex-col justify-between">
           {/* Start of Text Content */}
           <div className="space-y-4">
-            <p className="text-2xl md:text-6xl font-bold leading-tight">
-              Interesting <br className="hidden md:block" /> Collaboration{" "}
-              <br className="hidden md:block" /> With Us?
+            <p className="text-2xl xl:text-6xl font-bold leading-tight">
+              Interesting <br className="hidden xl:block" /> Collaboration{" "}
+              <br className="hidden xl:block" /> With Us?
             </p>
-            <p className="text-lg md:text-xl text-[#464646] md:pt-[2vw] pr-0 md:pr-12 tracking-wide font-light">
+            <p className="text-lg xl:text-xl text-[#464646] xl:pt-[2vw] pr-0 xl:pr-12 tracking-wide font-light">
               Help you to reach your business goal
             </p>
           </div>
 
           {/* End of Content with Button */}
-          <div className="md:mt-6 my-4">
+          <div className="xl:mt-6 my-4">
             <button className="bg-primary text-white px-12 py-3 rounded-full font-semibold hover:bg-primary shadow-2xl ">
               Get Started
             </button>

@@ -18,12 +18,12 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
       className="flex justify-between items-center my-4 cursor-pointer"
       onClick={onToggle}
     >
-      <h3 className="text-lg md:text-xl font-normal">{title}</h3>
-      <span className="text-lg md:text-xl">{isOpen ? "▲" : "▼"}</span>
+      <h3 className="text-lg xl:text-xl font-normal">{title}</h3>
+      <span className="text-lg xl:text-xl">{isOpen ? "▲" : "▼"}</span>
     </div>
     {isOpen && (
       <div className="my-8 overflow-hidden">
-        <p className="text-[#7C7C7C] text-base md:text-xl text-wrap">
+        <p className="text-[#7C7C7C] text-base xl:text-xl text-wrap">
           {description}
         </p>
       </div>
@@ -68,15 +68,15 @@ const Services_wellness: React.FC = () => {
   ];
 
   return (
-    <div className="md:mx-auto flex flex-col md:flex-row md:justify-around items-center md:items-start gap-4 p-8 md:p-0">
-      <div className="flex flex-col text-center md:text-start md:w-1/2">
+    <div className="xl:mx-auto flex flex-col xl:flex-row xl:justify-around items-center xl:items-start gap-4 p-8 xl:p-0">
+      <div className="flex flex-col text-center xl:text-start xl:w-1/2">
         <h2 className="text-[43px] font-bold mb-4">Wellness and Benefit</h2>
-        <p className="text-[#7C7C7C] text-[20px] mb-8 md:w-2/3">
+        <p className="text-[#7C7C7C] text-[20px] mb-8 xl:w-2/3">
           As part of our pursuit to lead impactful, fulfilling lives, we take
           benefits pretty seriously.
         </p>
       </div>
-      <div className="flex flex-col items-center md:items-start w-full max-w-md  ">
+      <div className="flex flex-col items-center xl:items-start w-full max-w-md  ">
         {items.map((item, index) => (
           <AccordionItem
             key={index}

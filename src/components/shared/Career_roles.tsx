@@ -18,11 +18,11 @@ const data = [
 const Career_roles:React.FC = () => {
   return (
     <div className="overflow-x-auto">
-      <div className="flex justify-center md:justify-start md:ml-20">
+      <div className="flex justify-center xl:justify-start xl:ml-20">
         <p className="font-medium text-[44px]">Open Roles</p>
       </div>
       <div className="flex items-center justify-center ">
-        <table className="w-full bg-white border-collapse border-spacing-y-[49px] md:mr-24">
+        <table className="w-full bg-white border-collapse border-spacing-y-[49px] xl:mr-24">
           <thead className="border-b">
             <tr>
               <th className="font-normal text-xl py-3 px-4">Team</th>
@@ -33,15 +33,15 @@ const Career_roles:React.FC = () => {
           <tbody>
             {data.map((item, index) => (
               <tr key={index} className="text-center ">
-                <td className="py-4 px-4 md:text-[27px] font-medium leading-[34px]">
+                <td className="py-4 px-4 xl:text-[27px] font-medium leading-[34px]">
                   {item.team}
                 </td>
                 <td className="py-4 px-4">
-                  <span className="inline-block bg-[#5C25F9] text-white font-normal px-4 py-1 rounded-full text-sm md:text-2xl">
+                  <span className="inline-block bg-[#5C25F9] text-white font-normal px-4 py-1 rounded-full text-sm xl:text-2xl">
                     {item.role}
                   </span>
                 </td>
-                <td className="py-4 px-4 md:text-[27px] font-medium leading-[34px]">
+                <td className="py-4 px-4 xl:text-[27px] font-medium leading-[34px]">
                   {item.location}
                 </td>
               </tr>

@@ -47,9 +47,9 @@ const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <div className="max-w-xl md:mx-auto ">
-      <h2 className="text-3xl font-bold mb-4 text-center md:text-start">Why Choose Us?</h2>
-      <p className="text-[#7C7C7C] text-[16px] mb-8 text-center md:text-start">
+    <div className="max-w-xl xl:mx-auto ">
+      <h2 className="text-3xl font-bold mb-4 text-center xl:text-start">Why Choose Us?</h2>
+      <p className="text-[#7C7C7C] text-[16px] mb-8 text-center xl:text-start">
         Techavis is a leading provider of IT solutions, distinguished by its commitment to innovation and customer satisfaction. Here’s why Techavis should be your preferred partner for IT services:
       </p>
       {items.map((item, index) => (

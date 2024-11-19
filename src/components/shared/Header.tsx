@@ -11,9 +11,9 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="contents w-full md:pt-5 md:pb-5 z-20">
+    <header className="contents w-full xl:pt-5 xl:pb-5 z-20">
       <div className="mx-auto flex justify-between items-center p-3">
-        <div className="flex items-center gap-3 md:ml-20 ml-8">
+        <div className="flex items-center gap-3 xl:ml-20 ml-8">
         <Link to="/" className=" flex justify-center items-center gap-4">
         
           <img src={logo} alt="Techavis Logo" className="h-11" />
@@ -24,7 +24,7 @@ const Header: React.FC = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="flex md:hidden">
+        <div className="flex xl:hidden">
           <button
             onClick={toggleDropdown}
             aria-label="Open main menu"
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
 
         {/* Dropdown Menu for Mobile */}
         {isDropdownOpen && (
-          <div className="absolute top-16 left-0 w-full bg-white flex flex-col items-center z-20 shadow-md md:hidden">
+          <div className="absolute top-16 left-0 w-full bg-white flex flex-col items-center z-20 shadow-md xl:hidden">
             <Link to="/" className="py-2 text-black font-medium text-base hover:text-blue-600" onClick={toggleDropdown}>Home</Link>
             <Link to="/about" className="py-2 text-black font-medium text-base hover:text-blue-600" onClick={toggleDropdown}>About</Link>
             <Link to="/services" className="py-2 text-black font-medium text-base hover:text-blue-600" onClick={toggleDropdown}>Services</Link>
@@ -59,8 +59,8 @@ const Header: React.FC = () => {
         )}
 
         {/* Desktop Menu */}
-        <div className="items-center hidden md:flex ">
-          <div className="w-[50vw] flex justify-evenly ">
+        <div className="items-center hidden xl:flex ">
+          <div className="w-[51.3vw] flex justify-evenly ">
             <Link to="/" className="text-black font-medium text-base hover:text-blue-600">Home</Link>
             <Link to="/about" className="text-black font-medium text-base hover:text-blue-600">About</Link>
             <Link to="/services" className="text-black font-medium text-base hover:text-blue-600">Services</Link>

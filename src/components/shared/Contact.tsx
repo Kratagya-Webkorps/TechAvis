@@ -13,8 +13,8 @@ const Contact = () => {
             Any question or remarks? Just write us a message!
           </p>
         </div>
-        <div className="flex flex-col md:flex-row mx-4 md:mx-[132px] md:justify-between bg-white shadow-xl mb-[62px] p-[10px]">
-          <div className="p-[10px] md:w-1/2 bg-primary rounded-xl">
+        <div className="flex flex-col xl:flex-row mx-4 xl:mx-[132px] xl:justify-between bg-white shadow-xl mb-[62px] p-[10px]">
+          <div className="p-[10px] xl:w-1/2 bg-primary rounded-xl">
             <div className="p-10 ">
               <p className="font-semibold text-[28px] text-white">
                 {" "}
@@ -45,7 +45,7 @@ const Contact = () => {
                 </div>
               </div>
               <div className="mt-[159px]">
-                <div className="flex space-x-4 mt-4 justify-center md:justify-start">
+                <div className="flex space-x-4 mt-4 justify-center xl:justify-start">
                   <img src={YTwitter} alt="Twitter" />
 
                   <div className="relative">
@@ -62,10 +62,10 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="w-full pt-4 md:px-[50px] md:pt-[60px] ">
+          <div className="w-full pt-4 xl:px-[50px] xl:pt-[60px] ">
             <div className="">
               <form className="flex flex-col  space-y-[45px] ">
-                <div className="grid md:grid-cols-2 gap-10">
+                <div className="grid xl:grid-cols-2 gap-10">
                   <div className="relative w-full mb-5">
                     <label htmlFor="first_name" className="text-[#8D8D8D] font-medium text-xs">
                       First name
@@ -93,7 +93,7 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-                <div className="grid md:grid-cols-2 gap-10">
+                <div className="grid xl:grid-cols-2 gap-10">
                   <div className="relative w-full mb-5">
                     <label htmlFor="email" className="text-[#8D8D8D] font-medium text-xs">
                       Email
@@ -164,7 +164,7 @@ const Contact = () => {
                   />
                 </div>
                 <div className="w-full flex justify-end ">
-                <button className=" mt-4 px-2 py-3 md:px-[48px] md:py-[15px] bg-primary text-white rounded shadow-lg">
+                <button className=" mt-4 px-2 py-3 xl:px-[48px] xl:py-[15px] bg-primary text-white rounded shadow-lg">
                   Send Message
                 </button>
                 </div>

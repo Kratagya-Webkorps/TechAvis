@@ -13,14 +13,14 @@ const About: React.FC = () => {
   return (
     <div>
       <div>
-        <div className="flex flex-col-reverse md:flex-row justify-around items-center md:items-start md:space-x-8 bg-[#FAFAFA] p-6 pt-0 md:p-12">
+        <div className="flex flex-col-reverse xl:flex-row justify-around items-center xl:items-start xl:space-x-8 bg-[#FAFAFA] p-6 pt-0 xl:p-12">
           {/* Left Text Section */}
-          <div className="mt-6 text-center md:text-left md:p-8 md:pb-0 md:pl-0 md:w-1/2">
-            <p className=" text-2xl md:text-[2.9rem] font-bold mb-4 md:mb-0 leading-tight">
+          <div className="mt-6 text-center xl:text-left xl:p-8 xl:pb-0 xl:pl-0 xl:w-1/2">
+            <p className=" text-2xl xl:text-[2.9rem] font-bold mb-4 xl:mb-0 leading-tight">
               We wanted to build a company that you will love to work with and
               connect to
             </p>
-            <p className="flex justify-center text-lg md:text-lg md:pt-[2vw] md:pr-12 tracking-wide font-light ">
+            <p className="flex justify-center text-lg xl:text-lg xl:pt-[2vw] xl:pr-12 tracking-wide font-light ">
               We’re doing things bigly, I mean really quite big. The way we
               operate is different from other companies because we disrupt. We
               break the code, we crack the code as well.
@@ -28,21 +28,21 @@ const About: React.FC = () => {
           </div>
 
           {/* Right Image Section */}
-          <div className="mt-6 md:mt-0 flex justify-center ">
+          <div className="mt-6 xl:mt-0 flex justify-center ">
             <img src={Img1} alt="" />
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-around items-center md:items-start p-6 md:p-12 ">
+        <div className="flex flex-col xl:flex-row justify-around items-center xl:items-start p-6 xl:p-12 ">
           {/* Left Text Section */}
-          <div className="text-center md:text-left md:pb-0 w-full md:w-1/2 flex flex-col justify-between">
+          <div className="text-center xl:text-left xl:pb-0 w-full xl:w-1/2 flex flex-col justify-between">
             {/* Start of Text Content */}
             <div className="space-y-4">
-              <p className="text-2xl md:text-[2.9rem] font-bold leading-tight">
-                When we get to work we <br className="hidden md:block" /> really
-                make things happen <br className="hidden md:block" /> fast and
+              <p className="text-2xl xl:text-[2.9rem] font-bold leading-tight">
+                When we get to work we <br className="hidden xl:block" /> really
+                make things happen <br className="hidden xl:block" /> fast and
                 powerfully
               </p>
-              <p className="text-lg md:text-lg  pr-0 md:pr-12 tracking-wide font-light">
+              <p className="text-lg xl:text-lg  pr-0 xl:pr-12 tracking-wide font-light">
                 We’re doing things bigly, I mean really quite big. The way we
                 operate is different from other companies because we disrupt. We
                 break the code, we crack the code as well.
@@ -50,7 +50,7 @@ const About: React.FC = () => {
             </div>
 
             {/* End of Content with Button */}
-            <div className="md:mt-16 my-4">
+            <div className="xl:mt-16 my-4">
               <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500">
                 Join Us
               </button>
@@ -93,31 +93,31 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-around items-center md:items-start  p-6 md:p-12 ">
+        <div className="flex flex-col xl:flex-row justify-around items-center xl:items-start  p-6 xl:p-12 ">
           {/* Left Text Section */}
-          <div className="text-center md:text-left md:pb-0 md:px-24 w-full md:w-1/2 flex flex-col justify-between">
+          <div className="text-center xl:text-left xl:pb-0 xl:px-24 w-full xl:w-1/2 flex flex-col justify-between">
             {/* Start of Text Content */}
             <div className="flex flex-col space-y-4">
-              <p className="text-xl  md:text-lg md:pr-12  tracking-wide font-bold text-[#20484F]">
+              <p className="text-xl  xl:text-lg xl:pr-12  tracking-wide font-bold text-[#20484F]">
                 Not your typical startup story
               </p>
-              <p className="text-2xl md:text-[2.9rem] my-4 font-bold leading-tight">
-                Our story isn’t usual <br className="hidden md:block" /> but it
-                is extra ordinary <br className="hidden md:block" /> learn about
+              <p className="text-2xl xl:text-[2.9rem] my-4 font-bold leading-tight">
+                Our story isn’t usual <br className="hidden xl:block" /> but it
+                is extra ordinary <br className="hidden xl:block" /> learn about
                 it.
               </p>
             </div>
           </div>
 
           {/* Right Image Section */}
-          <div className="md:w-2/3 md:px-12 mt-4 md:mt-0 ">
-            <p className="mb-8 text-center md:text-start text-lg">
+          <div className="xl:w-2/3 xl:px-12 mt-4 xl:mt-0 ">
+            <p className="mb-8 text-center xl:text-start text-lg">
               We’re making a massive impact—doing things on a whole new level.
               Our approach to managed IT solutions is unlike any other, because
               we disrupt the norm. We don’t just follow the rules; we redefine
               them.
             </p>
-            <p className="text-center md:text-start text-lg">
+            <p className="text-center xl:text-start text-lg">
               Explore how we operate, who we are, and what we stand for on this
               carefully crafted webpage. With a fresh perspective on IT
               infrastructure management, cybersecurity, cloud solutions, and
@@ -128,38 +128,38 @@ const About: React.FC = () => {
           </div>
         </div>
         {/* next */}
-        <div className="flex flex-col justify-center md:p-12">
+        <div className="flex flex-col justify-center xl:p-12">
           <div className="text-center w-full flex flex-col justify-center items-center">
             {/* Start of Text Content */}
             <div className="">
-              <p className="text-2xl md:text-[2.9rem] font-bold leading-tight mb-4">
+              <p className="text-2xl xl:text-[2.9rem] font-bold leading-tight mb-4">
                 Work shouldn’t be boring
               </p>
-              <p className="text-lg md:text-lg md:pt-5 tracking-wide font-light ">
+              <p className="text-lg xl:text-lg xl:pt-5 tracking-wide font-light ">
                 I want to fly like an angel flare on a ten feet snare I want to
-                dance <br className="hidden md:block" /> until the sun comes I
+                dance <br className="hidden xl:block" /> until the sun comes I
                 want to fight your cousin.
               </p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row mt-6 justify-around md:items-start items-center gap-8">
+          <div className="flex flex-col xl:flex-row mt-6 justify-around xl:items-start items-center gap-8">
             <img src={Img2} alt="" />
 
-            <img src={Img3} alt="" className="md:mt-32" />
+            <img src={Img3} alt="" className="xl:mt-32" />
 
             <img src={Img4} alt="" />
 
-            <img src={Img5} alt="" className="md:mt-32" />
+            <img src={Img5} alt="" className="xl:mt-32" />
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center md:p-12">
+        <div className="flex flex-col justify-center items-center xl:p-12">
           <div className="flex flex-col justify-center items-center mb-16">
             <img src={Quotation} alt="" className="size-12 mb-12" />
-            <p className="text-2xl md:text-[50px] font-bold leading-tight text-center">
-              Imagine the best product you’ve <br className="hidden md:block" />{" "}
+            <p className="text-2xl xl:text-[50px] font-bold leading-tight text-center">
+              Imagine the best product you’ve <br className="hidden xl:block" />{" "}
               used, times it by ten, and you’ll{" "}
-              <br className="hidden md:block" /> have something similar
+              <br className="hidden xl:block" /> have something similar
             </p>
           </div>
           <div className="flex gap-5 items-center">
@@ -180,15 +180,15 @@ const About: React.FC = () => {
             <div className="w-4 h-4 bg-about_num rounded-full"></div>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center p-4 md:p-12">
+        <div className="flex flex-col justify-center items-center p-4 xl:p-12">
           <div>
-            <p className="text-custom_blue font-medium text-2xl md:text-[59px] text-center">
+            <p className="text-custom_blue font-medium text-2xl xl:text-[59px] text-center">
               Get matched to your dream opportunity
             </p>
             <p className="text-[#94A2B3] font-normal text-center mt-6 ">
               Save time and Focus your energy in getting one step closer to your
               next best
-              <br className="hidden md:block" />
+              <br className="hidden xl:block" />
               opportunity. Join our talent network now!
             </p>
             <div className="flex justify-center mt-6">
