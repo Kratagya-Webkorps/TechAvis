@@ -9,7 +9,18 @@ import {
   Img8,
   Quotation,
 } from "../../assets";
+import { Link } from "react-router-dom";
+import Slider from "react-slick";
 const About: React.FC = () => {
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
   return (
     <div>
       <div>
@@ -32,7 +43,7 @@ const About: React.FC = () => {
             <img src={Img1} alt="" />
           </div>
         </div>
-        <div className="flex flex-col xl:flex-row justify-around items-center xl:items-start p-6 xl:p-12 ">
+        <div className="flex flex-col xl:flex-row justify-around items-center xl:items-start p-6 xl:p-12 xl:pt-24 ">
           {/* Left Text Section */}
           <div className="text-center xl:text-left xl:pb-0 w-full xl:w-1/2 flex flex-col justify-between">
             {/* Start of Text Content */}
@@ -51,9 +62,12 @@ const About: React.FC = () => {
 
             {/* End of Content with Button */}
             <div className="xl:mt-16 my-4">
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500">
-                Join Us
-              </button>
+              <Link to="/contact">
+                {" "}
+                <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500">
+                  Join Us
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -93,7 +107,7 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col xl:flex-row justify-around items-center xl:items-start  p-6 xl:p-12 ">
+        <div className="flex flex-col xl:flex-row justify-around items-center xl:items-start  p-6 xl:p-12 xl:pt-24 ">
           {/* Left Text Section */}
           <div className="text-center xl:text-left xl:pb-0 xl:px-24 w-full xl:w-1/2 flex flex-col justify-between">
             {/* Start of Text Content */}
@@ -128,7 +142,7 @@ const About: React.FC = () => {
           </div>
         </div>
         {/* next */}
-        <div className="flex flex-col justify-center xl:p-12">
+        <div className="flex flex-col justify-center xl:p-12 xl:pt-12">
           <div className="text-center w-full flex flex-col justify-center items-center">
             {/* Start of Text Content */}
             <div className="">
@@ -153,34 +167,59 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center xl:p-12">
-          <div className="flex flex-col justify-center items-center mb-16">
-            <img src={Quotation} alt="" className="size-12 mb-12" />
-            <p className="text-2xl xl:text-[50px] font-bold leading-tight text-center">
-              Imagine the best product you’ve <br className="hidden xl:block" />{" "}
-              used, times it by ten, and you’ll{" "}
-              <br className="hidden xl:block" /> have something similar
-            </p>
-          </div>
-          <div className="flex gap-5 items-center">
-            <img src={Img6} alt="" />
-            <div>
-              <p className="mb-2 text-about_num font-bold text-lg">
-                Elliot Rosenberg
-              </p>
-              <p className="text-about_heading font-normal">Product Lead</p>
+        <div className="xl:pt-12 py-12">
+          <Slider {...sliderSettings}>
+            <div className="flex flex-col justify-center items-center xl:p-12 xl:pt-12">
+              <div className="flex flex-col justify-center items-center mb-16">
+                <img
+                  src={Quotation}
+                  alt="Quotation"
+                  className="size-12 mb-12"
+                />
+                <p className="text-2xl xl:text-[50px] font-bold leading-tight text-center">
+                  Imagine the best product you’ve{" "}
+                  <br className="hidden xl:block" />
+                  used, times it by ten, and you’ll{" "}
+                  <br className="hidden xl:block" /> have something similar
+                </p>
+              </div>
+              <div className="flex justify-center gap-5 items-center">
+                <img src={Img6} alt="Person" />
+                <div>
+                  <p className="mb-2 text-about_num font-bold text-lg">
+                    Elliot Rosenberg
+                  </p>
+                  <p className="text-about_heading font-normal">Product Lead</p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="flex space-x-2 mt-12">
-            {/* First dot with different color */}
-            <div className="w-4 h-4 bg-[#B8E4DA] rounded-full"></div>
-            {/* Remaining dots with the same color */}
-            <div className="w-4 h-4 bg-about_num rounded-full"></div>
-            <div className="w-4 h-4 bg-about_num rounded-full"></div>
-            <div className="w-4 h-4 bg-about_num rounded-full"></div>
-          </div>
+
+            <div className="flex flex-col justify-center items-center xl:p-12 xl:pt-12">
+              <div className="flex flex-col justify-center items-center mb-16">
+                <img
+                  src={Quotation}
+                  alt="Quotation"
+                  className="size-12 mb-12"
+                />
+                <p className="text-2xl xl:text-[50px] font-bold leading-tight text-center">
+                  Think of brilliance, but brighter, sharper,{" "}
+                  <br className="hidden xl:block" />
+                  and endlessly more impactful—that’s what we aim for.
+                </p>
+              </div>
+              <div className="flex justify-center gap-5 items-center">
+                <img src={Img6} alt="Person" />
+                <div>
+                  <p className="mb-2 text-about_num font-bold text-lg">
+                    Jane Doe
+                  </p>
+                  <p className="text-about_heading font-normal">CEO</p>
+                </div>
+              </div>
+            </div>
+          </Slider>
         </div>
-        <div className="flex flex-col justify-center items-center p-4 xl:p-12">
+        <div className="flex flex-col justify-center items-center p-4 xl:p-12 xl:pt-24">
           <div>
             <p className="text-custom_blue font-medium text-2xl xl:text-[59px] text-center">
               Get matched to your dream opportunity
@@ -192,13 +231,15 @@ const About: React.FC = () => {
               opportunity. Join our talent network now!
             </p>
             <div className="flex justify-center mt-6">
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500">
-                APPLY AS A TALENT
-              </button>
+              <Link to="/career">
+                <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500">
+                  APPLY AS A TALENT
+                </button>
+              </Link>
             </div>
           </div>
         </div>
-        <div className="w-full size-full mt-4">
+        <div className="w-full size-full mt-4 ">
           <img src={Img8} alt="" className="object-contain w-full" />
         </div>
       </div>

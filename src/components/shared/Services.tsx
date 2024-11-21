@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ellipse7, Services_01, Services_02, Services_03 } from "../../assets";
 import { FaCloud, FaNetworkWired, FaShieldAlt, FaTools } from "react-icons/fa";
 import WhyChooseUs from "./WhyChooseUs";
+import { Link } from "react-router-dom";
 type ServiceKey =
   | "IT Infrastructure Management"
   | "Cloud Solutions & Management"
@@ -26,13 +27,17 @@ const Services: React.FC = () => {
   const serviceContent: Record<ServiceKey, ServiceContent> = {
     "IT Infrastructure Management": {
       title: "IT Infrastructure Management",
-      description: "IT Infrastructure Management is vital for ensuring the reliability, security, and efficiency of an organization's technology systems, encompassing hardware, software, networks, and data centers.",
-      details: "IT Infrastructure Management involves overseeing and optimizing an organization's entire IT ecosystem to support business operations effectively. This includes network management, which ensures connectivity and performance; server and hardware management, focusing on maintenance and scalability; and cloud infrastructure management, which optimizes cloud resources. By implementing proactive monitoring and maintenance practices, organizations can minimize downtime and enhance system performance. Additionally, robust security measures are essential to protect against cyber threats, ensuring data integrity and compliance with regulations. Effective IT infrastructure management not only boosts productivity but also drives business growth by aligning IT resources with organizational goals.",
+      description:
+        "IT Infrastructure Management is vital for ensuring the reliability, security, and efficiency of an organization's technology systems, encompassing hardware, software, networks, and data centers.",
+      details:
+        "IT Infrastructure Management involves overseeing and optimizing an organization's entire IT ecosystem to support business operations effectively. This includes network management, which ensures connectivity and performance; server and hardware management, focusing on maintenance and scalability; and cloud infrastructure management, which optimizes cloud resources. By implementing proactive monitoring and maintenance practices, organizations can minimize downtime and enhance system performance. Additionally, robust security measures are essential to protect against cyber threats, ensuring data integrity and compliance with regulations. Effective IT infrastructure management not only boosts productivity but also drives business growth by aligning IT resources with organizational goals.",
     },
     "Cloud Solutions & Management": {
       title: "Cloud Solutions & Management",
-      description: "Cloud Solutions & Management are essential for optimizing cloud resources, enabling organizations to leverage cloud technologies for improved performance and scalability.",
-      details: "Cloud Solutions & Management encompass a range of services designed to facilitate the efficient use of cloud computing resources. These solutions provide centralized management, allowing IT teams to monitor, provision, and configure cloud services from a single interface, which simplifies operations across public, private, and hybrid cloud environments, Automation is a key feature, enabling organizations to streamline routine tasks such as resource allocation and scaling, thereby reducing human error and improving efficiency, Additionally, effective cloud management ensures compliance with regulatory requirements and enhances security by automating policies and monitoring for potential threats, By implementing robust cloud management strategies, businesses can optimize costs, improve resource utilization, and maintain high performance levels across their cloud infrastructure.",
+      description:
+        "Cloud Solutions & Management are essential for optimizing cloud resources, enabling organizations to leverage cloud technologies for improved performance and scalability.",
+      details:
+        "Cloud Solutions & Management encompass a range of services designed to facilitate the efficient use of cloud computing resources. These solutions provide centralized management, allowing IT teams to monitor, provision, and configure cloud services from a single interface, which simplifies operations across public, private, and hybrid cloud environments, Automation is a key feature, enabling organizations to streamline routine tasks such as resource allocation and scaling, thereby reducing human error and improving efficiency, Additionally, effective cloud management ensures compliance with regulatory requirements and enhances security by automating policies and monitoring for potential threats, By implementing robust cloud management strategies, businesses can optimize costs, improve resource utilization, and maintain high performance levels across their cloud infrastructure.",
     },
     "Cybersecurity Services": {
       title: "Cybersecurity Services",
@@ -43,8 +48,10 @@ const Services: React.FC = () => {
     },
     "IT Support & Maintenance": {
       title: "IT Support & Maintenance",
-      description: "IT Support & Maintenance is essential for ensuring the smooth operation and reliability of an organization's IT systems, providing both proactive and reactive solutions.",
-      details: "IT Support & Maintenance involves a comprehensive suite of services aimed at keeping IT systems running efficiently. This includes preventive maintenance, which anticipates issues before they arise, and reactive support, which addresses problems as they occur. Support is typically categorized into three levels: Level 1 for basic troubleshooting, Level 2 for in-depth analysis, and Level 3 for advanced system administration. By implementing these services, organizations can minimize downtime, enhance productivity, and ensure that their IT infrastructure remains secure and up-to-date. Effective IT support not only improves operational efficiency but also fosters trust with clients by ensuring reliable service delivery.",
+      description:
+        "IT Support & Maintenance is essential for ensuring the smooth operation and reliability of an organization's IT systems, providing both proactive and reactive solutions.",
+      details:
+        "IT Support & Maintenance involves a comprehensive suite of services aimed at keeping IT systems running efficiently. This includes preventive maintenance, which anticipates issues before they arise, and reactive support, which addresses problems as they occur. Support is typically categorized into three levels: Level 1 for basic troubleshooting, Level 2 for in-depth analysis, and Level 3 for advanced system administration. By implementing these services, organizations can minimize downtime, enhance productivity, and ensure that their IT infrastructure remains secure and up-to-date. Effective IT support not only improves operational efficiency but also fosters trust with clients by ensuring reliable service delivery.",
     },
   };
   return (
@@ -64,9 +71,11 @@ const Services: React.FC = () => {
             Optimizing operations, unlocking insights, and accelerating business
             growth.
           </span>
-          <button className="bg-primary text-white px-12 py-3 rounded-full font-semibold hover:bg-primary shadow-lg ">
-            Connect with us
-          </button>
+          <Link to="/contact">
+            <button className="bg-primary text-white px-12 py-3 rounded-full font-semibold hover:bg-primary shadow-lg ">
+              Connect with us
+            </button>
+          </Link>
         </div>
 
         <div className="flex justify-center pb-4 xl:pb-0 ">
@@ -76,7 +85,7 @@ const Services: React.FC = () => {
           <img src={Services_01} alt="" />
         </div>
       </div>
-      <div className="flex flex-col xl:flex-row justify-around p-4 xl:p-12  xl:space-y-0 xl:space-x-8 bg-[#F4F9FF] ">
+      <div className="flex flex-col xl:flex-row justify-around p-4 xl:p-12 xl:pt-24 xl:space-y-0 xl:space-x-8 bg-[#F4F9FF] ">
         {/* Left Section with Title and Description */}
         <div className="w-full xl:w-1/2 text-center xl:text-left xl:mt-20 space-y-6 p-4 xl:px-24">
           <h3 className="text-primary text-2xl font-semibold">Our Services</h3>
@@ -133,7 +142,7 @@ const Services: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col pt-8 xl:pt-[70px] xl:mx-[100px] space-y-8 xl:space-y-0 ">
+      <div className="flex flex-col pt-8 xl:pt-24 xl:mx-[100px]  space-y-8 xl:space-y-0 ">
         {/* Left Section: Service List */}
         <h2 className="text-2xl xl:text-4xl font-bold text-[#334756] text-center xl:text-start ">
           Tailored IT Solutions Designed To <br className="hidden xl:block" />
@@ -176,7 +185,7 @@ const Services: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col xl:flex-row justify-around p-6 xl:p-12 space-y-8 xl:space-y-0 xl:space-x-8">
+      <div className="flex flex-col xl:flex-row justify-around p-6 xl:p-12 xl:pt-24 space-y-8 xl:space-y-0 xl:space-x-8">
         <div className="mt-12 ">
           <WhyChooseUs />
         </div>
@@ -184,7 +193,7 @@ const Services: React.FC = () => {
           <img src={Services_02} alt="" />
         </div>
       </div>
-      <div className="flex flex-col xl:flex-row justify-around items-center xl:items-start p-6 xl:p-12 xl:mx-24 ">
+      <div className="flex flex-col xl:flex-row justify-around items-center xl:pt-24 xl:items-start p-6 xl:p-12 xl:mx-24 ">
         {/* Left Text Section */}
         <div className="text-center xl:text-left xl:pb-0 w-full xl:w-1/2 flex flex-col justify-between">
           {/* Start of Text Content */}
@@ -200,9 +209,11 @@ const Services: React.FC = () => {
 
           {/* End of Content with Button */}
           <div className="xl:mt-6 my-4">
-            <button className="bg-primary text-white px-12 py-3 rounded-full font-semibold hover:bg-primary shadow-2xl ">
-              Get Started
-            </button>
+            <Link to="/contact">
+              <button className="bg-primary text-white px-12 py-3 rounded-full font-semibold hover:bg-primary shadow-2xl ">
+                Get Started
+              </button>
+            </Link>
           </div>
         </div>
 

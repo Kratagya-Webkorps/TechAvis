@@ -3,7 +3,6 @@ import Services_wellness from "./Services_wellness";
 import Career_roles from "./Career_roles";
 import Slider from "react-slick";
 
-
 const Career: React.FC = () => {
   const data = [
     {
@@ -27,16 +26,16 @@ const Career: React.FC = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false, // Default no autoplay
-    arrows: true,    // Show arrows by default
+    arrows: true, // Show arrows by default
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 768, // Mobile screens below 768px
         settings: {
-          autoplay: true,      // Enable autoplay on mobile
+          autoplay: true, // Enable autoplay on mobile
           autoplaySpeed: 2000, // Set the autoplay speed in milliseconds
-          arrows: false,       // Hide arrows on mobile
+          arrows: false, // Hide arrows on mobile
         },
       },
     ],
@@ -47,8 +46,8 @@ const Career: React.FC = () => {
       <div>
         <div>
           <div className="flex justify-end xl:ml-[195px] xl:mr-[160px] text-center pt-16 px-4 mb-12">
-            <button className=" absolute left-[60%]  bg-primary text-white px-3 py-2 xl:px-12 xl:py-3 rounded-full rounded-bl-lg font-semibold hover:bg-primary shadow-2xl ">
-              Get Started
+            <button className=" absolute left-[60%] cursor-default  bg-primary text-white px-3 py-2 xl:px-12 xl:py-3 rounded-full rounded-bl-lg font-semibold hover:bg-primary shadow-2xl ">
+              We are hiring
             </button>
           </div>
           <div className="flex flex-col items-center ">
@@ -70,22 +69,26 @@ const Career: React.FC = () => {
                 to be part of a dynamic and innovative team.
               </p>
             </div>
-            <a
-              href="/careers"
+            <p
               className="font-semibold flex gap-1 xl:justify-start"
+              onClick={() => {
+                document
+                  .getElementById("roles")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
               <span className="text-[#5C25F9] border-b border-[#5C25F9]">
                 See Positions
               </span>
               <span className="text-[#5C25F9] text-xl">↗</span>
-            </a>
+            </p>
           </div>
         </div>
-        <div className="xl:mx-[160px] xl:mt-[100px] ">
+        <div className="xl:mx-[120px] xl:mt-24 ">
           <Services_wellness />
         </div>
-        <div className="xl:mx-[160px] xl:mt-[100px]">
-          <div className="flex justify-center xl:justify-start xl:ml-20">
+        <div className="xl:mx-[120px] xl:mt-24">
+          <div className="flex justify-center xl:justify-start">
             <p className="font-medium text-[44px]">Interview process</p>
           </div>
           <div className="xl:w-1/2 mx-auto">
@@ -106,21 +109,24 @@ const Career: React.FC = () => {
                         {item.description}
                       </p>
                     </div>
-                   
                   </div>
                 </div>
               ))}
             </Slider>
           </div>
         </div>
-        <div className="xl:mx-[160px] xl:mt-[100px]">
+        <div className="xl:mx-[120px] xl:mt-24" id="roles">
           <Career_roles />
         </div>
       </div>
     </div>
   );
 };
-const NextArrow = (props: JSX.IntrinsicAttributes & React.ClassAttributes<HTMLButtonElement> & React.ButtonHTMLAttributes<HTMLButtonElement>) => (
+const NextArrow = (
+  props: JSX.IntrinsicAttributes &
+    React.ClassAttributes<HTMLButtonElement> &
+    React.ButtonHTMLAttributes<HTMLButtonElement>
+) => (
   <button
     {...props}
     className="absolute right-[-20px] top-1/2 transform -translate-y-1/2 text-2xl"
@@ -129,7 +135,11 @@ const NextArrow = (props: JSX.IntrinsicAttributes & React.ClassAttributes<HTMLBu
   </button>
 );
 
-const PrevArrow = (props: JSX.IntrinsicAttributes & React.ClassAttributes<HTMLButtonElement> & React.ButtonHTMLAttributes<HTMLButtonElement>) => (
+const PrevArrow = (
+  props: JSX.IntrinsicAttributes &
+    React.ClassAttributes<HTMLButtonElement> &
+    React.ButtonHTMLAttributes<HTMLButtonElement>
+) => (
   <button
     {...props}
     className="absolute left-[-20px] top-1/2 transform -translate-y-1/2 text-2xl"

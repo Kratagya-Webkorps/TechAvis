@@ -13,7 +13,7 @@ const Header: React.FC = () => {
   return (
     <header className="contents w-full xl:pt-5 xl:pb-5 z-20">
       <div className="mx-auto flex justify-between items-center p-3">
-        <div className="flex items-center gap-3 xl:ml-20 ml-8">
+        <div className="flex items-center gap-3 xl:ml-[98px] ml-8">
         <Link to="/" className=" flex justify-center items-center gap-4">
         
           <img src={logo} alt="Techavis Logo" className="h-11" />
@@ -60,7 +60,7 @@ const Header: React.FC = () => {
 
         {/* Desktop Menu */}
         <div className="items-center hidden xl:flex ">
-          <div className="w-[51.3vw] flex justify-evenly ">
+          <div className="w-[47.7vw] flex justify-evenly ">
             <Link to="/" className="text-black font-medium text-base hover:text-blue-600">Home</Link>
             <Link to="/about" className="text-black font-medium text-base hover:text-blue-600">About</Link>
             <Link to="/services" className="text-black font-medium text-base hover:text-blue-600">Services</Link>

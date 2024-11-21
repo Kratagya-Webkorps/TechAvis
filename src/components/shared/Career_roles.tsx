@@ -17,8 +17,8 @@ const data = [
 
 const Career_roles:React.FC = () => {
   return (
-    <div className="overflow-x-auto">
-      <div className="flex justify-center xl:justify-start xl:ml-20">
+    <div className="">
+      <div className="flex justify-center xl:justify-start">
         <p className="font-medium text-[44px]">Open Roles</p>
       </div>
       <div className="flex items-center justify-center ">
