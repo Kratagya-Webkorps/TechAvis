@@ -44,7 +44,7 @@ const HelpSection: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-row md:flex-col   ">
+    <div className="flex flex-row md:flex-col">
       <div className="relative">
         <div className="hidden xl:block absolute rotate-180  left-[82px] xl:mt-80 ">
         <img src={ellipse2} alt="" />
@@ -61,7 +61,7 @@ const HelpSection: React.FC = () => {
           <h2 className="md:text-[40px] md:leading-[50PX] text-2xl font-semibold text-black whitespace-nowrap">
             How can we help <br /> your Business?
           </h2>
-          <p className="text-secondary font-normal leading-[22px] text-[16px] my-[28px] w-full  xl:w-2/3 md:text-center xl:text-start tracking-normal">
+          <p className="text-secondary font-normal leading-[22px] text-[16px] mt-2 xl:mt-[28px] mb-[28px] w-full  xl:w-2/3 md:text-center xl:text-start tracking-normal">
             We provide end-to-end IT management, robust security, and scalable
             solutions to drive your business forward effortlessly.
           </p>

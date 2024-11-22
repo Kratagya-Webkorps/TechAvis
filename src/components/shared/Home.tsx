@@ -147,16 +147,16 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col xl:flex-row mt-12 xl:mt-28 justify-center items-center  xl:px-[120px]">
-          <div className="mt-6 text-center xl:text-left w-1/3 ">
-            <span className=" text-4xl md:text-[3vw] font-bold whitespace-nowrap">
+        <div className="flex flex-col xl:flex-row my-12 xl:mt-28 md:justify-around justify-between items-center  xl:px-[120px]">
+          <div className="mt-6 text-center xl:text-left md:w-1/3 ">
+            <span className=" text-4xl md:text-[44px] font-bold whitespace-nowrap">
               Our Client
             </span>
-            <span className="flex  text-base sm:text-lg text-tertiary tracking-wide font-light py-2 ">
-              Several selected clients, who already believe in our service.
+            <span className="flex text-base sm:text-lg text-tertiary  font-light py-2 ">
+              Several selected clients, who already <br className="hidden md:block"/> believe in our service.
             </span>
           </div>
-          <div className="flex gap-[59px]">
+          <div className="flex gap-[59px] flex-col md:flex-row">
             <img
               src={google}
               alt=""
@@ -190,7 +190,7 @@ const Home: React.FC = () => {
             <img
               src={ellipse4}
               alt="Ellipse 4"
-              className="absolute bottom-0 left-[36rem] transform -translate-x-1/2 z-10 "
+              className="absolute bottom-0 left-[36rem] transform -translate-x-1/2 z-10 mr-12 "
             />
             <img src={home2} alt="Home 2" className="relative z-20" />
           </div>
@@ -201,7 +201,7 @@ const Home: React.FC = () => {
           <img
             src={ellipse5}
             alt="Ellipse 5"
-            className="hidden xl:block absolute  -left-8  xl:left-12 transform -translate-x-1/2 z-0 opacity-50"
+            className="hidden xl:block absolute top-20 -left-8  xl:left-12 transform -translate-x-1/2 z-0 opacity-50 ml-8"
           />
 
           {/* Text Content */}
@@ -225,7 +225,7 @@ const Home: React.FC = () => {
         <p className="text-2xl xl:text-[3vw] font-bold xl:px-3 leading-none">
           What our happy client say
         </p>
-        <span className="mt-4 text-base sm:text-[1vw] text-tertiary tracking-wide font-light">
+        <span className="mt-4 text-base  text-tertiary tracking-wide font-light">
           Several selected clients, who already believe in our service.
         </span>
       </div>
@@ -260,22 +260,22 @@ const Home: React.FC = () => {
 
       {/* next */}
       <div className="relative flex justify-center items-center xl:px-24 mt-12 xl:my-24 p-6 mb-12">
-        <div className="z-10 flex flex-col xl:flex-row items-center justify-between xl:h-64 bg-[#f0f7ff] rounded-[2rem] p-4 xl:p-0 xl:rounded-[5rem] shadow-lg w-full xl:space-x-6">
+        <div className="z-10 md:w-auto xl:w-full flex flex-col xl:flex-row items-center justify-between xl:h-64 bg-[#f0f7ff] rounded-[2rem] p-4 xl:p-0 xl:rounded-[5rem] shadow-lg w-full xl:space-x-6">
           <div className="flex justify-center items-center flex-col xl:w-1/2 text-center xl:text-left px-4">
             <h2 className="text-xl xl:text-[3vw] font-bold leading-none whitespace-nowrap">
               Subscribe Newsletter
             </h2>
-            <p className="mt-4 text-base sm:text-[1vw] text-tertiary tracking-wide font-light">
+            <p className="mt-4 text-base text-tertiary tracking-wide font-light">
               I will update good news and promotion service not spam
             </p>
           </div>
 
-          <div className="xl:relative flex items-center justify-center mt-4 xl:mt-0 xl:bg-primary xl:rounded-r-[200rem] xl:rounded-bl-[450rem] xl:rounded-tl-[200rem]  w-full xl:w-[40%] xl:h-full xl:px-4">
+          <div className="xl:relative flex flex-col items-center xl:items-start justify-center mt-4 xl:mt-0 xl:bg-primary xl:rounded-r-[200rem] xl:rounded-bl-[450rem] xl:rounded-tl-[200rem]  w-full xl:w-[40%] xl:h-full xl:px-4">
             <form
               className="relative w-full md:flex flex-col md:items-center"
               onSubmit={handleSubmit}
             >
-              <div className="flex items-center w-full max-w-lg relative">
+              <div className="flex items-center w-full max-w-lg relative xl:mr-52">
                 <input
                   type="email"
                   value={email}
@@ -292,12 +292,14 @@ const Home: React.FC = () => {
                   Contact Now
                 </button>
               </div>
+            </form>
+              <div className="xl:ml-5">
               {error && (
-                <p className="text-red-500 bg-white w-fit p-1 rounded-xl text-lg mt-1 ml-4 md:ml-8">
+                <p className="text-red-500 bg-white w-fit p-1 rounded-full text-lg mt-1 ">
                   {error}
                 </p>
               )}
-            </form>
+              </div>
           </div>
         </div>
 
