@@ -40,7 +40,7 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit =async (e: React.FormEvent) => {
     e.preventDefault();
     let hasError = false;
     const newErrors: FormErrors = {};
@@ -63,7 +63,27 @@ const Contact = () => {
     setErrors(newErrors);
     if (!hasError) {
       // Submit form
-      console.log("Form Submitted", formData);
+      const sendData = {
+        firstName: formData.first_name,
+        lastName: formData.last_name,
+        contact: formData.contact,
+        email: formData.email,
+        message: formData.message,
+        subject: formData.subject,
+      };
+      
+      
+      try {
+        const response = await fetch("https://formspree.io/f/mbljkpnr", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(sendData),
+        });
+        console.log(response)
+      } catch (error) {
+        console.log(error)
+        
+      }
     }
   };
 

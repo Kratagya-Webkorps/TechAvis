@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-semibold text-gray-900 whitespace-nowrap">
               What We Do
             </h3>
-            <ul className="mt-4 text-sm space-y-2 font-normal xl:whitespace-nowrap">
+            <ul className="mt-4 text-sm space-y-2 font-normal ">
               <li>
                 <Link to="/services"> IT Infrastructure Management</Link>
               </li>

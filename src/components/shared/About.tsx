@@ -156,7 +156,7 @@ const About: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col xl:flex-row mt-6 justify-around xl:items-start items-center gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4  mt-6 justify-around justify-items-center  md:items-start items-center gap-8">
             <img src={Img2} alt="" />
 
             <img src={Img3} alt="" className="xl:mt-32" />
@@ -169,7 +169,7 @@ const About: React.FC = () => {
 
         <div className="xl:pt-12 py-12">
           <Slider {...sliderSettings}>
-            <div className="flex flex-col justify-center items-center xl:p-12 xl:pt-12">
+            <div className="flex flex-col justify-center items-center xl:p-12 xl:py-0 ">
               <div className="flex flex-col justify-center items-center mb-16">
                 <img
                   src={Quotation}
@@ -194,7 +194,7 @@ const About: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex flex-col justify-center items-center xl:p-12 xl:pt-12">
+            <div className="flex flex-col justify-center items-center xl:p-12 xl:py-0">
               <div className="flex flex-col justify-center items-center mb-16">
                 <img
                   src={Quotation}

@@ -76,7 +76,7 @@ const Home: React.FC = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -87,6 +87,17 @@ const Home: React.FC = () => {
     } else {
       setError("");
       // Form submission logic here
+      try {
+        const response = await fetch("https://formspree.io/f/mbljkpnr", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({email}),
+        });
+        console.log(response)
+      } catch (error) {
+        console.log(error)
+        
+      }
       console.log("Email submitted:", email);
     }
   };
@@ -136,7 +147,7 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col xl:flex-row mt-12 xl:mt-28 justify-center items-end  xl:px-[120px]">
+        <div className="flex flex-col xl:flex-row mt-12 xl:mt-28 justify-center items-center  xl:px-[120px]">
           <div className="mt-6 text-center xl:text-left w-1/3 ">
             <span className=" text-4xl md:text-[3vw] font-bold whitespace-nowrap">
               Our Client
@@ -190,7 +201,7 @@ const Home: React.FC = () => {
           <img
             src={ellipse5}
             alt="Ellipse 5"
-            className="hidden xl:block absolute -top-4 -left-8 xl:top-20 xl:left-12 transform -translate-x-1/2 z-0 opacity-50"
+            className="hidden xl:block absolute  -left-8  xl:left-12 transform -translate-x-1/2 z-0 opacity-50"
           />
 
           {/* Text Content */}

@@ -186,10 +186,10 @@ const Services: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-col xl:flex-row justify-around p-6 xl:p-12 xl:pt-24 space-y-8 xl:space-y-0 xl:space-x-8">
-        <div className="mt-12 ">
+        <div className="mt-12 flex justify-center xl:justify-start">
           <WhyChooseUs />
         </div>
-        <div>
+        <div className="flex justify-center xl:justify-start">
           <img src={Services_02} alt="" />
         </div>
       </div>
