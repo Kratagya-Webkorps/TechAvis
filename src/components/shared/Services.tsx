@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ellipse7, Services_01, Services_02, Services_03 } from "../../assets";
+import { ellipse10, ellipse11, ellipse7, Services_01, Services_02, Services_03 } from "../../assets";
 import { FaCloud, FaNetworkWired, FaShieldAlt, FaTools } from "react-icons/fa";
 import WhyChooseUs from "./WhyChooseUs";
 import { Link } from "react-router-dom";
@@ -58,7 +58,9 @@ const Services: React.FC = () => {
     <div className="mt-12">
       <div>
         <div className="relative flex flex-col items-center mb-4 xl:mb-0 ">
-          <div className="absolute left-[4vw] top-[20%]">
+        <div className="absolute right-0"><img src={ellipse10} alt="" /></div>
+
+          <div className="absolute left-[4vw] top-[20%] md:top-[12%]">
             <img src={ellipse7} alt="" />
           </div>
           <p className="font-extrabold text-services_heading text-3xl xl:text-6xl text-center">
@@ -83,11 +85,12 @@ const Services: React.FC = () => {
             <img src={ellipse7} alt="" />
           </div>
           <img src={Services_01} alt="" />
+
         </div>
       </div>
-      <div className="flex flex-col xl:flex-row justify-around p-4 xl:p-12 xl:pt-24 xl:space-y-0 xl:space-x-8 bg-[#F4F9FF] ">
+      <div className="flex flex-col xl:flex-row justify-around p-4 xl:p-12 xl:space-y-0 xl:space-x-8 bg-[#F4F9FF] ">
         {/* Left Section with Title and Description */}
-        <div className="w-full xl:w-1/2 text-center xl:text-left xl:mt-20 space-y-6 p-4 xl:px-24">
+        <div className="w-full xl:w-1/2 text-center xl:text-left xl:mt-20 space-y-6 p-4 xl:px-16">
           <h3 className="text-primary text-2xl font-semibold">Our Services</h3>
           <h2 className="text-4xl xl:text-6xl font-bold text-services_heading">
             Perfect and Fast Movement
@@ -142,7 +145,7 @@ const Services: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col pt-8 xl:pt-24 xl:mx-[100px]  space-y-8 xl:space-y-0 ">
+      <div className="flex flex-col pt-8 xl:pt-24 xl:mx-[110px]  space-y-8 xl:space-y-0 ">
         {/* Left Section: Service List */}
         <h2 className="text-2xl xl:text-4xl font-bold text-[#334756] text-center xl:text-start ">
           Tailored IT Solutions Designed To <br className="hidden xl:block" />
@@ -158,8 +161,8 @@ const Services: React.FC = () => {
                     onClick={() => setSelectedService(service)}
                     className={`cursor-pointer p-2 text-xl xl:text-[25px] text-center xl:text-start  font-semibold whitespace-nowrap  ${
                       selectedService === service
-                        ? "text-white bg-blue-600 rounded-md"
-                        : "text-gray-600"
+                        ? "text-white bg-primary w-fit xl:py-3 xl:px-5"
+                        : "text-gray-600 xl:py-3 xl:px-5"
                     }`}
                   >
                     {service}
@@ -170,11 +173,14 @@ const Services: React.FC = () => {
           </div>
 
           {/* Right Section: Selected Service Content */}
-          <div className=" bg-[#EEF2FE] p-8 rounded-lg shadow-lg xl:ml-[207px] xl:min-h-[440px] justify-items-center xl:justify-items-start  justify-center items-center">
+          <div className="relative bg-[#EEF2FE] p-8 rounded-lg shadow-lg xl:ml-[207px] xl:min-h-[440px] justify-items-center xl:justify-items-start md:mx-20 xl:mx-0  justify-center items-center">
+            <div className="absolute -bottom-12 -right-20 -z-10">
+              <img src={ellipse11} alt="" />
+            </div>
             <h3 className="text-2xl font-semibold text-gray-800 text-center xl:text-start">
               {serviceContent[selectedService].title}
             </h3>
-            <div className="mt-2 h-3 bg-gradient-to-r from-blue-600 to-transparent w-1/2 "></div>
+            <div className="mt-2 h-3 bg-gradient-to-r from-primary to-transparent w-1/2 "></div>
 
             <p className="text-gray-600 mt-4 font-bold text-center xl:text-start">
               {serviceContent[selectedService].description}
@@ -185,15 +191,15 @@ const Services: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col xl:flex-row justify-around p-6 xl:p-12 xl:pt-24 space-y-8 xl:space-y-0 xl:space-x-8">
+      <div className="flex flex-col xl:flex-row justify-around p-6 xl:p-12 xl:ml-[83px] xl:pt-24 space-y-8 xl:space-y-0 xl:space-x-8">
         <div className="mt-12 flex justify-center xl:justify-start">
           <WhyChooseUs />
         </div>
-        <div className="flex justify-center xl:justify-start">
+        <div className="flex justify-center xl:justify-start xl:pr-9 2xl:pr-3 ">
           <img src={Services_02} alt="" />
         </div>
       </div>
-      <div className="flex flex-col xl:flex-row justify-around items-center xl:pt-24 xl:items-start p-6 xl:p-12 xl:mx-24 ">
+      <div className="flex flex-col xl:flex-row justify-around items-center xl:pt-24 xl:items-start p-6 xl:p-12 xl:mx-[60px] ">
         {/* Left Text Section */}
         <div className="text-center xl:text-left xl:pb-0 w-full xl:w-1/2 flex flex-col justify-between">
           {/* Start of Text Content */}

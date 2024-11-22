@@ -96,9 +96,9 @@ const Contact = () => {
             Any question or remarks? Just write us a message!
           </p>
         </div>
-        <div className="flex flex-col xl:flex-row mx-4 xl:mx-[132px] xl:justify-between bg-white shadow-xl mb-[62px] p-[10px]">
-          <div className="p-[10px] xl:w-1/2 bg-primary rounded-xl">
-            <div className="p-10 ">
+        <div className="flex flex-col xl:flex-row  xl:mx-[132px] xl:justify-between bg-white shadow-xl mb-[62px] p-[10px]">
+          <div className="xl:w-1/2 bg-primary rounded-xl">
+            <div className="p-4 md:p-10  ">
               <p className="font-semibold text-[28px] text-white">
                 {" "}
                 Contact Information
@@ -162,7 +162,7 @@ const Contact = () => {
                     )}
                   </div>
                   <div className="relative w-full mb-5">
-                    <label htmlFor="last_name" className="font-medium text-base mt-2">
+                    <label htmlFor="last_name" className="text-[#8D8D8D] font-medium text-base mt-2">
                       Last name
                     </label>
                     <input
@@ -171,7 +171,7 @@ const Contact = () => {
                       id="last_name"
                       value={formData.last_name}
                       onChange={handleInputChange}
-                      className={`block w-full py-2.5 text-base mt-2 text-gray-900 bg-transparent border-b-2 ${
+                      className={`text-gray-900 block w-full py-2.5 text-base mt-2  bg-transparent border-b-2 ${
                         errors.last_name ? "border-red-500" : "border-gray-300"
                       } focus:outline-none focus:border-blue-600`}
                       placeholder=" "
@@ -206,7 +206,7 @@ const Contact = () => {
                     )}
                   </div>
                   <div className="relative w-full mb-5">
-                    <label htmlFor="contact" className="font-medium text-base mt-2">
+                    <label htmlFor="contact" className="text-[#8D8D8D] font-medium text-base mt-2">
                       Phone Number
                     </label>
                     <input

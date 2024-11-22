@@ -23,7 +23,7 @@ const About: React.FC = () => {
   };
   return (
     <div>
-      <div>
+      <div className="text-about_heading">
         <div className="flex flex-col-reverse xl:flex-row justify-around items-center xl:items-start xl:space-x-8 bg-[#FAFAFA] p-6 pt-0 xl:p-12">
           {/* Left Text Section */}
           <div className="mt-6 text-center xl:text-left xl:p-8 xl:pb-0 xl:pl-0 xl:w-1/2">
@@ -31,7 +31,7 @@ const About: React.FC = () => {
               We wanted to build a company that you will love to work with and
               connect to
             </p>
-            <p className="flex justify-center text-lg xl:text-lg xl:pt-[2vw] xl:pr-12 tracking-wide font-light ">
+            <p className="flex justify-center  text-lg xl:text-lg xl:pt-[2vw] xl:pr-12 tracking-wide font-light ">
               We’re doing things bigly, I mean really quite big. The way we
               operate is different from other companies because we disrupt. We
               break the code, we crack the code as well.
@@ -43,7 +43,7 @@ const About: React.FC = () => {
             <img src={Img1} alt="" />
           </div>
         </div>
-        <div className="flex flex-col xl:flex-row justify-around items-center xl:items-start p-6 xl:p-12 xl:pt-24 ">
+        <div className="flex flex-col xl:flex-row justify-around items-center xl:items-start p-6 xl:p-16 xl:pt-24 ">
           {/* Left Text Section */}
           <div className="text-center xl:text-left xl:pb-0 w-full xl:w-1/2 flex flex-col justify-between">
             {/* Start of Text Content */}
@@ -61,10 +61,10 @@ const About: React.FC = () => {
             </div>
 
             {/* End of Content with Button */}
-            <div className="xl:mt-16 my-4">
+            <div className="xl:mt-16 my-6">
               <Link to="/contact">
                 {" "}
-                <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500">
+                <button className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">
                   Join Us
                 </button>
               </Link>
@@ -72,35 +72,35 @@ const About: React.FC = () => {
           </div>
 
           {/* Right Image Section */}
-          <div className="grid grid-cols-2 gap-20 text-gray-200  pr-12">
-            <div className="flex flex-col gap-8">
-              <p className="text-6xl font-bold text-about_num">32</p>
-              <div className="flex flex-col gap-3">
+          <div className="grid grid-cols-2 gap-20 text-gray-200 xl:pr-12">
+            <div className="flex flex-col items-center xl:items-start  gap-4">
+              <p className="text-5xl md:text-6xl font-bold text-about_num">32</p>
+              <div className="flex flex-col items-center text-center xl:items-start xl:text-start  gap-3">
                 <p className="text-about_num font-bold">Cups of coffee</p>
                 <p className="text-about_num font-normal">
                   Designing this section
                 </p>
               </div>
             </div>
-            <div className="flex flex-col gap-8">
-              <p className="text-6xl font-bold text-about_num">300</p>
-              <div className="flex flex-col gap-3">
+            <div className="flex flex-col items-center xl:items-start  gap-4">
+              <p className="text-5xl md:text-6xl font-bold text-about_num">300</p>
+              <div className="flex flex-col items-center text-center xl:items-start xl:text-start  gap-3">
                 <p className="text-about_num font-bold">Team members</p>
                 <p className="text-about_num font-normal">Working right now</p>
               </div>
             </div>
-            <div className="flex flex-col gap-8">
-              <p className="text-6xl font-bold text-about_num">17</p>
-              <div className="flex flex-col gap-3">
+            <div className="flex flex-col items-center xl:items-start  gap-4">
+              <p className="text-5xl md:text-6xl font-bold text-about_num">17</p>
+              <div className="flex flex-col items-center text-center xl:items-start xl:text-start  gap-3">
                 <p className="text-about_num font-bold">Languages spoken</p>
                 <p className="text-about_num font-normal">
                   On our table in the pub
                 </p>
               </div>
             </div>
-            <div className="flex flex-col gap-8">
-              <p className="text-6xl font-bold text-about_num">2,143</p>
-              <div className="flex flex-col gap-3">
+            <div className="flex flex-col items-center xl:items-start  gap-4">
+              <p className="text-5xl md:text-6xl font-bold text-about_num">2,143</p>
+              <div className="flex flex-col items-center text-center xl:items-start xl:text-start  gap-3">
                 <p className="text-about_num font-bold">Dollars spent today</p>
                 <p className="text-about_num font-normal">On Pizza’s</p>
               </div>
@@ -109,7 +109,7 @@ const About: React.FC = () => {
         </div>
         <div className="flex flex-col xl:flex-row justify-around items-center xl:items-start  p-6 xl:p-12 xl:pt-24 ">
           {/* Left Text Section */}
-          <div className="text-center xl:text-left xl:pb-0 xl:px-24 w-full xl:w-1/2 flex flex-col justify-between">
+          <div className="text-center xl:text-left xl:pb-0 xl:px-16 w-full xl:w-1/2 flex flex-col justify-between">
             {/* Start of Text Content */}
             <div className="flex flex-col space-y-4">
               <p className="text-xl  xl:text-lg xl:pr-12  tracking-wide font-bold text-[#20484F]">
@@ -178,9 +178,9 @@ const About: React.FC = () => {
                 />
                 <p className="text-2xl xl:text-[50px] font-bold leading-tight text-center">
                   Imagine the best product you’ve{" "}
-                  <br className="hidden xl:block" />
+                  <br className="hidden md:block" />
                   used, times it by ten, and you’ll{" "}
-                  <br className="hidden xl:block" /> have something similar
+                  <br className="hidden md:block" /> have something similar
                 </p>
               </div>
               <div className="flex justify-center gap-5 items-center">
@@ -203,8 +203,10 @@ const About: React.FC = () => {
                 />
                 <p className="text-2xl xl:text-[50px] font-bold leading-tight text-center">
                   Think of brilliance, but brighter, sharper,{" "}
-                  <br className="hidden xl:block" />
-                  and endlessly more impactful—that’s what we aim for.
+                  <br className="hidden md:block" />
+                  and endlessly more impactful—that’s{" "}
+                  <br className="hidden md:block" />
+                  what we aim for.
                 </p>
               </div>
               <div className="flex justify-center gap-5 items-center">
@@ -219,12 +221,12 @@ const About: React.FC = () => {
             </div>
           </Slider>
         </div>
-        <div className="flex flex-col justify-center items-center p-4 xl:p-12 xl:pt-24">
+        <div className="flex flex-col justify-center items-center p-4 xl:p-12">
           <div>
-            <p className="text-custom_blue font-medium text-2xl xl:text-[59px] text-center">
+            <p className="text-custom_blue font-normal text-2xl xl:text-[59px] text-center">
               Get matched to your dream opportunity
             </p>
-            <p className="text-[#94A2B3] font-normal text-center mt-6 ">
+            <p className="text-[#94A2B3] font-normal text-center mt-[26px] ">
               Save time and Focus your energy in getting one step closer to your
               next best
               <br className="hidden xl:block" />
@@ -232,7 +234,7 @@ const About: React.FC = () => {
             </p>
             <div className="flex justify-center mt-6">
               <Link to="/career">
-                <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500">
+                <button className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700">
                   APPLY AS A TALENT
                 </button>
               </Link>

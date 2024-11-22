@@ -8,6 +8,8 @@ import ellipse6 from "./Ellipse 6.png";
 import ellipse7 from "./Ellipse 7.png";
 import ellipse8 from "./Ellipse 8.png";
 import ellipse9 from "./Ellipse 9.png";
+import ellipse10 from "./Ellipse 10.png";
+import ellipse11 from "./Ellipse 11.png";
 import dot_Ornament from "./Dot Ornament.png";
 import airbnb from "./Airbnb Logo.png";
 import amazon from "./Amazon Logo.png";
@@ -60,6 +62,8 @@ export {
   ellipse7,
   ellipse8,
   ellipse9,
+  ellipse10,
+  ellipse11,
   dot_Ornament,
   airbnb,
   amazon,

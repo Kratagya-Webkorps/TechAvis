@@ -11,7 +11,7 @@ import Contact from "./components/shared/Contact";
 function App() {
   return (
     <>
-      <div className="overflow-x-hidden">
+      <div className="p-2 md:p-0 overflow-x-hidden">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

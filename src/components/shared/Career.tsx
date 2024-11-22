@@ -46,7 +46,7 @@ const Career: React.FC = () => {
       <div>
         <div>
           <div className="flex justify-end xl:ml-[195px] xl:mr-[160px] text-center pt-16 px-4 mb-12">
-            <button className=" absolute left-[60%] cursor-default  bg-primary text-white px-3 py-2 xl:px-12 xl:py-3 rounded-full rounded-bl-lg font-semibold hover:bg-primary shadow-2xl ">
+            <button className=" absolute left-[60%] cursor-default  bg-[#5C25F9] text-white px-3 py-2 xl:px-12 xl:py-3 rounded-full rounded-bl-lg font-semibold shadow-2xl ">
               We are hiring
             </button>
           </div>
@@ -84,7 +84,7 @@ const Career: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className="xl:mx-[120px] xl:mt-24 ">
+        <div className="xl:mx-[90px] xl:mt-24 ">
           <Services_wellness />
         </div>
         <div className="xl:mx-[120px] xl:mt-24">
@@ -115,7 +115,7 @@ const Career: React.FC = () => {
             </Slider>
           </div>
         </div>
-        <div className="xl:mx-[120px] xl:mt-24" id="roles">
+        <div className=" xl:px-[70px] xl:mt-24" id="roles">
           <Career_roles />
         </div>
       </div>

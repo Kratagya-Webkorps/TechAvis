@@ -287,7 +287,7 @@ const Home: React.FC = () => {
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-3 bg-primary text-white font-semibold rounded-full"
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 md:px-6 px-3 py-3 bg-primary text-white font-semibold rounded-full"
                 >
                   Contact Now
                 </button>

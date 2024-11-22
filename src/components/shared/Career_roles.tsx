@@ -22,7 +22,7 @@ const Career_roles:React.FC = () => {
         <p className="font-medium text-[44px]">Open Roles</p>
       </div>
       <div className="flex items-center justify-center ">
-        <table className="w-full bg-white border-collapse border-spacing-y-[49px] xl:mr-24">
+        <table className="w-full bg-white border-collapse border-spacing-y-[49px] xl:mx-32">
           <thead className="border-b">
             <tr>
               <th className="font-normal text-xl py-3 px-4">Team</th>
