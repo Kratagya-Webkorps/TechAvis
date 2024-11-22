@@ -1,4 +1,4 @@
-import home1 from "./Home 1.png";
+import home1 from "./Home 1.webp";
 import ellipse1 from "./Ellipse 1.png";
 import ellipse2 from "./Ellipse 2.png";
 import ellipse3 from "./Ellipse 3.png";
