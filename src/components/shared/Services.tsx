@@ -170,11 +170,11 @@ const Services: React.FC = () => {
           </div>
 
           {/* Right Section: Selected Service Content */}
-          <div className=" bg-[#EEF2FE] p-8 rounded-lg shadow-lg xl:ml-[207px] xl:min-h-[440px]  justify-center items-center">
+          <div className=" bg-[#EEF2FE] p-8 rounded-lg shadow-lg xl:ml-[207px] xl:min-h-[440px] justify-items-center xl:justify-items-start  justify-center items-center">
             <h3 className="text-2xl font-semibold text-gray-800 text-center xl:text-start">
               {serviceContent[selectedService].title}
             </h3>
-            <div className="mt-2 h-3 bg-gradient-to-r from-blue-600 to-transparent w-1/2"></div>
+            <div className="mt-2 h-3 bg-gradient-to-r from-blue-600 to-transparent w-1/2 "></div>
 
             <p className="text-gray-600 mt-4 font-bold text-center xl:text-start">
               {serviceContent[selectedService].description}

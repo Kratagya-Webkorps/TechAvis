@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Footer: React.FC = () => {
   return (
     <footer className=" px-4 xl:px-[120px]">
-      <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center space-y-8 xl:space-y-0 border-t-2 pt-11">
+      <div className="flex flex-col xl:flex-row justify-between items-center space-y-8 xl:space-y-0 border-t-2 pt-11">
         {/* Logo and Description */}
         <div className="xl:w-1/3 ">
           <div className="flex items-center justify-center xl:justify-start space-x-3">
