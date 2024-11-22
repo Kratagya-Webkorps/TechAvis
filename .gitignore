@@ -11,15 +11,6 @@ lerna-debug.log*
 node_modules/
 .bower_components/
 
-# Build outputs
-dist/
-dist-ssr/
-out/
-build/
-.cache/
-.vite/
-.vitest/
-
 # Static build output
 static/
 
