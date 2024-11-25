@@ -7,6 +7,7 @@ import Footer from "./components/shared/Footer";
 import Services from "./components/shared/Services";
 import Career from "./components/shared/Career";
 import Contact from "./components/shared/Contact";
+import ErrorPage from "./components/shared/ErrorPage";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       <div className="p-2 md:p-0 overflow-x-hidden">
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} errorElement={<ErrorPage />} />
+          <Route path="/*" element={<ErrorPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/career" element={<Career />} />

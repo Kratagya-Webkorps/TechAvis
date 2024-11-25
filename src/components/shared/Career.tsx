@@ -2,6 +2,7 @@ import React from "react";
 import Services_wellness from "./Services_wellness";
 import Career_roles from "./Career_roles";
 import Slider from "react-slick";
+import { Helmet } from "react-helmet-async";
 
 const Career: React.FC = () => {
   const data = [
@@ -43,6 +44,13 @@ const Career: React.FC = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Career</title>
+        <meta
+          name="description"
+          content="Join our passionate web development team! We're seeking talented individuals to innovate together."
+        />
+      </Helmet>
       <div>
         <div>
           <div className="flex justify-end xl:ml-[195px] xl:mr-[160px] text-center pt-16 px-4 mb-12">

@@ -1,8 +1,16 @@
 import React, { useState } from "react";
-import { ellipse10, ellipse11, ellipse7, Services_01, Services_02, Services_03 } from "../../assets";
+import {
+  ellipse10,
+  ellipse11,
+  ellipse7,
+  Services_01,
+  Services_02,
+  Services_03,
+} from "../../assets";
 import { FaCloud, FaNetworkWired, FaShieldAlt, FaTools } from "react-icons/fa";
 import WhyChooseUs from "./WhyChooseUs";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 type ServiceKey =
   | "IT Infrastructure Management"
   | "Cloud Solutions & Management"
@@ -56,9 +64,18 @@ const Services: React.FC = () => {
   };
   return (
     <div className="mt-12">
+      <Helmet>
+        <title>Service</title>
+        <meta
+          name="description"
+          content="Techavis offers IT Infrastructure Management, Cloud Solutions, Cybersecurity Services, and IT Support to empower your business with seamless, secure, and efficient technology solutions."
+        />
+      </Helmet>
       <div>
         <div className="relative flex flex-col items-center mb-4 xl:mb-0 ">
-        <div className="absolute right-0"><img src={ellipse10} alt="" /></div>
+          <div className="absolute right-0">
+            <img src={ellipse10} alt="" />
+          </div>
 
           <div className="absolute left-[4vw] top-[20%] md:top-[12%]">
             <img src={ellipse7} alt="" />
@@ -85,7 +102,6 @@ const Services: React.FC = () => {
             <img src={ellipse7} alt="" />
           </div>
           <img src={Services_01} alt="" />
-
         </div>
       </div>
       <div className="flex flex-col xl:flex-row justify-around p-4 xl:p-12 xl:space-y-0 xl:space-x-8 bg-[#F4F9FF] ">

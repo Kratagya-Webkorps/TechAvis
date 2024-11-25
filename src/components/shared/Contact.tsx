@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { BsFillTelephoneOutboundFill } from "react-icons/bs";
 import { CiMail } from "react-icons/ci";
 import { IoLocationOutline } from "react-icons/io5";
@@ -40,7 +41,7 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit =async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     let hasError = false;
     const newErrors: FormErrors = {};
@@ -71,24 +72,29 @@ const Contact = () => {
         message: formData.message,
         subject: formData.subject,
       };
-      
-      
+
       try {
         const response = await fetch("https://formspree.io/f/mbljkpnr", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(sendData),
         });
-        console.log(response)
+        console.log(response);
       } catch (error) {
-        console.log(error)
-        
+        console.log(error);
       }
     }
   };
 
   return (
     <div className="mt-[83px] bg-backg">
+      <Helmet>
+        <title>Contact</title>
+        <meta
+          name="description"
+          content="Contact techavis."
+        />
+      </Helmet>
       <div>
         <div className="flex flex-col text-center mb-[54px]">
           <p className="text-[40px] font-bold text-[#6748E8] ">Contact Us</p>
@@ -110,20 +116,21 @@ const Contact = () => {
                 <div className="flex items-center text-white ">
                   <BsFillTelephoneOutboundFill size={24} />
                   <p className=" whitespace-nowrap ml-[25px] ">
-                  +91 8458909134
+                    +91 8458909134
                   </p>
                 </div>
                 <div className="text-white flex items-center">
                   <CiMail size={24} />
                   <p className="text-white whitespace-nowrap ml-[25px] ">
-                  harsh.agrawal@techavis.com
+                    harsh.agrawal@techavis.com
                   </p>
                 </div>
                 <div className="text-white flex items-center">
                   <IoLocationOutline size={24} />
                   <p className="text-white  ml-[25px] ">
-                    Trios Co-working, 3rd floor, Lalwani Icon, 
-                    <br />off New Airport Road, Sakore Nagar, Viman Nagar,
+                    Trios Co-working, 3rd floor, Lalwani Icon,
+                    <br />
+                    off New Airport Road, Sakore Nagar, Viman Nagar,
                     <br /> Pune, Maharashtra 411014
                   </p>
                 </div>
@@ -162,7 +169,10 @@ const Contact = () => {
                     )}
                   </div>
                   <div className="relative w-full mb-5">
-                    <label htmlFor="last_name" className="text-[#8D8D8D] font-medium text-base mt-2">
+                    <label
+                      htmlFor="last_name"
+                      className="text-[#8D8D8D] font-medium text-base mt-2"
+                    >
                       Last name
                     </label>
                     <input
@@ -177,7 +187,9 @@ const Contact = () => {
                       placeholder=" "
                     />
                     {errors.last_name && (
-                      <p className="text-red-500 text-base mt-2">{errors.last_name}</p>
+                      <p className="text-red-500 text-base mt-2">
+                        {errors.last_name}
+                      </p>
                     )}
                   </div>
                 </div>
@@ -202,11 +214,16 @@ const Contact = () => {
                       placeholder=" "
                     />
                     {errors.email && (
-                      <p className="text-red-500 text-base mt-2">{errors.email}</p>
+                      <p className="text-red-500 text-base mt-2">
+                        {errors.email}
+                      </p>
                     )}
                   </div>
                   <div className="relative w-full mb-5">
-                    <label htmlFor="contact" className="text-[#8D8D8D] font-medium text-base mt-2">
+                    <label
+                      htmlFor="contact"
+                      className="text-[#8D8D8D] font-medium text-base mt-2"
+                    >
                       Phone Number
                     </label>
                     <input
@@ -221,7 +238,9 @@ const Contact = () => {
                       placeholder=" "
                     />
                     {errors.contact && (
-                      <p className="text-red-500 text-base mt-2">{errors.contact}</p>
+                      <p className="text-red-500 text-base mt-2">
+                        {errors.contact}
+                      </p>
                     )}
                   </div>
                 </div>
@@ -246,7 +265,9 @@ const Contact = () => {
                     )}
                   </div>
                   {errors.subject && (
-                    <p className="text-red-500 text-base mt-2">{errors.subject}</p>
+                    <p className="text-red-500 text-base mt-2">
+                      {errors.subject}
+                    </p>
                   )}
                 </div>
 
@@ -269,7 +290,9 @@ const Contact = () => {
                     placeholder="Write your message.. "
                   />
                   {errors.message && (
-                    <p className="text-red-500 text-base mt-2 ">{errors.message}</p>
+                    <p className="text-red-500 text-base mt-2 ">
+                      {errors.message}
+                    </p>
                   )}
                 </div>
 

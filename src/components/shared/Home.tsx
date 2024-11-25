@@ -92,22 +92,23 @@ const Home: React.FC = () => {
         const response = await fetch("https://formspree.io/f/mbljkpnr", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({email}),
+          body: JSON.stringify({ email }),
         });
-        console.log(response)
+        console.log(response);
       } catch (error) {
-        console.log(error)
-        
+        console.log(error);
       }
       console.log("Email submitted:", email);
     }
   };
   return (
     <>
-    <Helmet>
-      <title>Home</title>
-      <meta name="description" content="Techavis Services Pvt. Ltd. offers IT management solutions via ManageEngine to enhance efficiency, security, and control, simplifying IT for seamless productivity."/>
-      
+      <Helmet>
+        <title>Home</title>
+        <meta
+          name="description"
+          content="Techavis Services Pvt. Ltd. offers IT management solutions via ManageEngine to enhance efficiency, security, and control, simplifying IT for seamless productivity."
+        />
       </Helmet>
       <div>
         <div className="w-full ">
@@ -115,7 +116,7 @@ const Home: React.FC = () => {
             <div className="flex  flex-col xl:flex-row-reverse xl:items-start xl:justify-between xl:h-[33vw]  ">
               {/* Right Section (Image) */}
               <div>
-                <img src={home4} alt="" className="w-[100vw]"/>
+                <img src={home4} alt="" className="w-[100vw]" />
               </div>
               {/* Left Section (Text Content) */}
               <div className=" w-[100%] xl:w-[43.5%]  xl:pt-0 xl:ml-[120px]">
@@ -159,7 +160,8 @@ const Home: React.FC = () => {
               Our Client
             </span>
             <span className="flex text-base sm:text-lg text-tertiary  font-light py-2 ">
-              Several selected clients, who already <br className="hidden md:block"/> believe in our service.
+              Several selected clients, who already{" "}
+              <br className="hidden md:block" /> believe in our service.
             </span>
           </div>
           <div className="flex gap-[59px] flex-col md:flex-row">
@@ -299,13 +301,13 @@ const Home: React.FC = () => {
                 </button>
               </div>
             </form>
-              <div className="xl:ml-5">
+            <div className="xl:ml-5">
               {error && (
                 <p className="text-red-500 bg-white w-fit p-1 rounded-full text-lg mt-1 ">
                   {error}
                 </p>
               )}
-              </div>
+            </div>
           </div>
         </div>
 

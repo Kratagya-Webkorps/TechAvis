@@ -11,6 +11,7 @@ import {
 } from "../../assets";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import { Helmet } from "react-helmet-async";
 const About: React.FC = () => {
   const sliderSettings = {
     dots: true,
@@ -23,6 +24,13 @@ const About: React.FC = () => {
   };
   return (
     <div>
+      <Helmet>
+        <title>About</title>
+        <meta
+          name="description"
+          content="At Techavis Services Pvt. Ltd., we deliver tailored, ManageEngine-powered IT solutions that enhance operational efficiency, strengthen security, and simplify infrastructure management for businesses globally."
+        />
+      </Helmet>
       <div className="text-about_heading">
         <div className="flex flex-col-reverse xl:flex-row justify-around items-center xl:items-start xl:space-x-8 bg-[#FAFAFA] p-6 pt-0 xl:p-12">
           {/* Left Text Section */}
@@ -74,7 +82,9 @@ const About: React.FC = () => {
           {/* Right Image Section */}
           <div className="grid grid-cols-2 gap-20 text-gray-200 xl:pr-12">
             <div className="flex flex-col items-center xl:items-start  gap-4">
-              <p className="text-5xl md:text-6xl font-bold text-about_num">32</p>
+              <p className="text-5xl md:text-6xl font-bold text-about_num">
+                32
+              </p>
               <div className="flex flex-col items-center text-center xl:items-start xl:text-start  gap-3">
                 <p className="text-about_num font-bold">Cups of coffee</p>
                 <p className="text-about_num font-normal">
@@ -83,14 +93,18 @@ const About: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-col items-center xl:items-start  gap-4">
-              <p className="text-5xl md:text-6xl font-bold text-about_num">300</p>
+              <p className="text-5xl md:text-6xl font-bold text-about_num">
+                300
+              </p>
               <div className="flex flex-col items-center text-center xl:items-start xl:text-start  gap-3">
                 <p className="text-about_num font-bold">Team members</p>
                 <p className="text-about_num font-normal">Working right now</p>
               </div>
             </div>
             <div className="flex flex-col items-center xl:items-start  gap-4">
-              <p className="text-5xl md:text-6xl font-bold text-about_num">17</p>
+              <p className="text-5xl md:text-6xl font-bold text-about_num">
+                17
+              </p>
               <div className="flex flex-col items-center text-center xl:items-start xl:text-start  gap-3">
                 <p className="text-about_num font-bold">Languages spoken</p>
                 <p className="text-about_num font-normal">
@@ -99,7 +113,9 @@ const About: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-col items-center xl:items-start  gap-4">
-              <p className="text-5xl md:text-6xl font-bold text-about_num">2,143</p>
+              <p className="text-5xl md:text-6xl font-bold text-about_num">
+                2,143
+              </p>
               <div className="flex flex-col items-center text-center xl:items-start xl:text-start  gap-3">
                 <p className="text-about_num font-bold">Dollars spent today</p>
                 <p className="text-about_num font-normal">On Pizza’s</p>
