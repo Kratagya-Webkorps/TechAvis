@@ -17,6 +17,7 @@ import {
 import Slider from "react-slick";
 import HelpSection from "./HelpSection";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Home: React.FC = () => {
   const [placeholder, setPlaceholder] = useState("Enter your email address...");
@@ -103,20 +104,25 @@ const Home: React.FC = () => {
   };
   return (
     <>
+    <Helmet>
+      <title>Home</title>
+      <meta name="description" content="Techavis Services Pvt. Ltd. offers IT management solutions via ManageEngine to enhance efficiency, security, and control, simplifying IT for seamless productivity."/>
+      
+      </Helmet>
       <div>
         <div className="w-full ">
           <div className="w-full ">
             <div className="flex  flex-col xl:flex-row-reverse xl:items-start xl:justify-between xl:h-[33vw]  ">
               {/* Right Section (Image) */}
               <div>
-                <img src={home4} alt="" className="w-[100vw]" />
+                <img src={home4} alt="" className="w-[100vw]"/>
               </div>
               {/* Left Section (Text Content) */}
               <div className=" w-[100%] xl:w-[43.5%]  xl:pt-0 xl:ml-[120px]">
                 <div className="mt-6 text-center xl:text-left xl:mt-24 lg:mt-[40px] xl:w-4/5 xl:p-12 xl:pl-0 xl:pb-0 ">
-                  <p className=" text-2xl md:text-[3vw] font-bold whitespace-nowrap ">
+                  <h1 className=" text-2xl md:text-[3vw] font-bold whitespace-nowrap ">
                     Optimize. Secure. Simplify IT.
-                  </p>
+                  </h1>
                   <p className="flex justify-center text-sm xl:text-lg text-secondary xl:pt-[2vw]  tracking-wide font-light p-2 ">
                     Techavis Services Pvt. Ltd. offers end-to-end IT management
                     solutions powered by ManageEngine, helping businesses
